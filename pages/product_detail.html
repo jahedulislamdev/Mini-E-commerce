@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>BrandName - Product Detail</title>
+   <link rel="stylesheet" href="/css/utility.css">
+   <link rel="stylesheet" href="/css/product.css">
+   <link rel="stylesheet" href="/css/bootstrap.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+   <!-- Navbar start -->
+   <nav class="navbar navbar-expand-lg shadow-sm">
+      <div class="container-fluid">
+         <a href="/index.html" class="navbar-brand fw-bold text-uppercase">BrandName</a>
+         <!-- <img src="" alt=""> -->
+         <div class="d-flex">
+            <button class="btn navbar-toggler me-2" type="button" data-bs-toggle="offcanvas"
+               data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <button class="btn d-md-none position-relative rounded-1 px-2 py-0" id="ShoppingBag">
+               <i class="fa-solid fa-briefcase"></i>
+               <span class="position-absolute top-0 start-100 translate-middle px-2 py-0 rounded-circle">
+                  <span id="ShoppingBagCounter" class="text-sm p-0 m-0 text-warning">0</span>
+               </span>
+            </button>
+         </div>
+         <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+            aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header">
+               <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">BRANDNAME</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+               <ul class="navbar-nav ms-auto">
+                  <li class="nav-item mx-4 h6"><a href="/index.html"
+                        class="nav-link active text-white px-2">Services</a>
+                  </li>
+                  <li class="nav-item mx-4 h6"><a href="/pages/product.html" class="nav-link px-2">Products</a>
+                  </li>
+                  <li class="nav-item mx-4 h6"><a href="/pages/contact.html" class="nav-link px-2">Contact</a>
+                  </li>
+                  <li class="nav-item mx-4">
+                     <button class="btn d-none d-md-block position-relative rounded-1 px-2 py-0" id="ShoppingBag">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle px-2 py-0 rounded-circle">
+                           <span id="ShoppingBagCounter" class="text-sm p-0 m-0 text-warning">0</span>
+                        </span>
+                     </button>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </nav>
+   <!-- Navbar end -->
+
+   <div class="container-fluid">
+      <div class="row py-5 px-3">
+         <div class="product-showcase col-12 col-md-6 border border-dark">
+            <img class="img-fluid m-auto"
+               src="https://www.nike.sa/dw/image/v2/BDVB_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dwfa4e2f3c/nk/274/c/a/6/8/5/274ca685_5291_4bff_99ee_de42a16d76a4.jpg?sw=700&sh=700&sm=fit&q=100&strip=false"
+               alt="">
+            <div>
+               slider here...
+            </div>
+         </div>
+         <div class="col-12 col-md-6 border border-dark p-2">
+            <div class="d-flex justify-content-between">
+               <h5>32 In 1 Multipurpose Precision Screwdriver Disassemble Electronic Repair Tool</h5>
+               <div class="rating fw-light text-nowrap"><i class="fa-solid fa-star text-warning"></i> 5.0</div>
+            </div>
+            <h5 class="fw-normal">$0000</h5>
+            <p>Brand : <small class="text-primary">No Brand. More Hand Tools from No
+                  Brand</small></p>
+            <!-- product color -->
+            <div class="select-color d-md-flex align-items-center">
+               <h6>Select Color</h6>
+               <div class="btn-group" role="group">
+                  <div class="form-check">
+                     <input class="form-check-input d-none" type="radio" name="color" id="color1" value="blue" checked>
+                     <label for="color1" class="color-radio" style="background-color: blue;"></label>
+                  </div>
+                  <div class="form-check">
+                     <input class="form-check-input d-none" type="radio" name="color" id="color2" value="green">
+                     <label for="color2" class="color-radio" style="background-color: green;"></label>
+                  </div>
+                  <div class="form-check">
+                     <input class="form-check-input d-none" type="radio" name="color" id="color3" value="black">
+                     <label for="color3" class="color-radio" style="background-color: black;"></label>
+                  </div>
+                  <div class="form-check">
+                     <input class="form-check-input d-none" type="radio" name="color" id="color4" value="pink">
+                     <label for="color4" class="color-radio" style="background-color: pink;"></label>
+                  </div>
+               </div>
+            </div>
+            <!-- product size -->
+            <div class="product-size my-3 d-md-flex align-items-center">
+               <h6 class="me-4">Select Size</h6>
+               <div class="btn-group" role="group" aria-label="Size selection">
+                  <input type="radio" class="btn-check" name="size" id="sizeS" autocomplete="off" checked>
+                  <label class="btn btn-outline-secondary" for="sizeS">S</label>
+
+                  <input type="radio" class="btn-check" name="size" id="sizeM" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="sizeM">M</label>
+
+                  <input type="radio" class="btn-check" name="size" id="sizeL" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="sizeL">L</label>
+
+                  <input type="radio" class="btn-check" name="size" id="sizeXL" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="sizeXL">XL</label>
+
+                  <input type="radio" class="btn-check" name="size" id="sizeXXL" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="sizeXXL">XXL</label>
+
+                  <input type="radio" class="btn-check" name="size" id="size3XL" autocomplete="off">
+                  <label class="btn btn-outline-secondary" for="size3XL">3XL</label>
+               </div>
+            </div>
+            <!-- product quantity -->
+            <div class="quantity my-2 p-1 rounded-2 border d-flex justify-content-center align-items-center">
+               <button class="btn border bg-primary-subtle fw-semibold py-1 m-0 me-2">-</button>
+               <button class="btn disabled border-0" role="doc-notice">0</button>
+               <button class="btn border bg-primary-subtle fw-semibold py-1 m-0 ms-2">+</button>
+            </div>
+            <!-- buy or add to cart btn -->
+            <div>
+               <button class="btn btn-outline-primary rounded-0 px-4">Buy Now</button>
+               <button class="btn bg-warning rounded-0 px-4">Add to Cart</button>
+            </div>
+            <small class="fw-light text-muted mt-2 lh-sm d-block">A short description. Lorem ipsum dolor sit amet,
+               consectetur
+               adipisicing elit. Tempore, minima?
+            </small>
+         </div>
+      </div>
+   </div>
+   </div>
+
+   <!-- Footer start-->
+   <footer>
+      <p class="text-center bg-dark text-white fw-light p-3 my-0">&copy; 2025 <a href="index.html"
+            class="text-decoration-none text-white fw-semibold">BRANDNAME</a>. All
+         rights reserved.</p>
+   </footer>
+   <!-- Footer end-->
+   <script src="/src/JS/bootstrap.js"></script>
+
+</body>
+
+</html>

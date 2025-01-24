@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>BrandName - HOME</title>
+   <link rel="stylesheet" href="./css/utility.css">
+   <link rel="stylesheet" href="./css/index.css">
+   <link rel="stylesheet" href="./css/bootstrap.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+   <!-- navbar start -->
+   <nav class="navbar navbar-expand-lg shadow-sm">
+      <div class="container-fluid">
+         <a href="index.html" class="navbar-brand fw-bold text-uppercase">BrandName</a>
+         <!-- <img src="" alt=""> -->
+         <div class="d-flex">
+            <button class="btn navbar-toggler" type="button" data-bs-toggle="offcanvas"
+               data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <button class="btn d-none position-relative rounded-1 px-2 py-0" id="ShoppingBag">
+               <i class="fa-solid fa-cart-shopping"></i>
+               <span class="position-absolute top-0 start-100 translate-middle px-2 py-0 rounded-circle">
+                  <span id="ShoppingBagCounter" class="text-sm p-0 m-0 text-warning">0</span>
+               </span>
+            </button>
+         </div>
+         <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+            aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header">
+               <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">BRANDNAME</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+               <ul class="navbar-nav ms-auto">
+                  <li class="nav-item mx-4 h6"><a href="index.html" class="nav-link active text-white px-2">Services</a>
+                  </li>
+                  <li class="nav-item mx-4 h6"><a href="/pages/product.html" class="nav-link px-2">Products</a>
+                  </li>
+                  <li class="nav-item mx-4 h6"><a href="/pages/contact.html" class="nav-link px-2">Contact</a>
+                  </li>
+                  <li class="nav-item mx-4">
+                     <button class="btn d-none d-md-block position-relative rounded-1 px-2 py-0" id="ShoppingBag">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle px-2 py-0 rounded-circle">
+                           <span id="ShoppingBagCounter" class="text-sm p-0 m-0 text-warning">0</span>
+                        </span>
+                     </button>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </nav>
+   <!-- navbar end-->
+   <section id="services">
+      <div class="container-fluid">
+         <div class="row align-items-center py-5 about-text">
+            <p class="services-title col fw-semibold lh-1">Our <br> Services</p>
+            <p class="services-desc col fw-light text-end">"Discover a unique marketplace where seamless transactions
+               meet curated variety, offering you exclusive products at your fingertips."</p>
+         </div>
+      </div>
+      <div class="row p-2 p-lg-5 justify-content-center business-card">
+         <div class="col col-sm-6 col-md-4 col-lg-3 mt-3 mt-md-0">
+            <div class="product-card card-body  rounded-4 border border-5 border-primary-subtle">
+               <img
+                  src="https://img.freepik.com/free-vector/hand-customer-picking-category-internet-store-tablet-with-online-clothing-shop-screen-flat-vector-illustration-sale-online-shopping-ecommerce-concept-banner-landing-web-page_74855-24709.jpg"
+                  class=" rounded-top-3 object-fit-cover mx-auto opacity-75">
+               <p class="text-center m-0 bg-primary-subtle py-3 rounded-bottom-3">
+                  <a href="/pages/product.html"
+                     class="product-card-link text-decoration-none text-dark text-md w-100%">Online
+                     Shopping
+                  </a>
+               </p>
+            </div>
+         </div>
+         <div class="col col-sm-6 col-md-4 col-lg-3 mt-3 mt-md-0">
+            <div class="product-card card-body rounded-4 border border-5 border-primary-subtle">
+               <img
+                  src="https://cdn.vectorstock.com/i/500p/12/60/sewing-machine-and-scissors-symbol-vector-50071260.jpg"
+                  class=" rounded-top-3 object-fit-cover mx-auto opacity-75" style="height: 10rem; width: 100%;">
+               <p class="text-center m-0 bg-warning-subtle py-3 rounded-bottom-3">
+                  <a href="#" class="product-card-link text-decoration-none text-dark text-md w-100%">Sarah Tailor</a>
+               </p>
+            </div>
+         </div>
+         <div class="col col-sm-6 col-md-4 col-lg-3 mt-3 mt-md-0">
+            <div class="product-card card-body rounded-4 border border-5 border-primary-subtle">
+               <img
+                  src="https://img.freepik.com/premium-vector/hand-drawn-call-center-characters-with-smartphones-concept-online-support-flat-style-isolated-background_1375-28728.jpg?semt=ais_hybrid"
+                  class=" rounded-top-3 object-fit-cover mx-auto opacity-75" style="height: 10rem; width: 100%;">
+               <p class="text-center m-0 bg-danger-subtle py-3 rounded-bottom-3">
+                  <a href="#" class="product-card-link text-decoration-none text-dark text-md w-100%">Contact Us</a>
+               </p>
+            </div>
+         </div>
+         <div class="col col-sm-6 col-md-4 col-lg-3 mt-3 mt-md-0">
+            <div class="product-card card-body rounded-4 border border-5 border-primary-subtle">
+               <img
+                  src="https://img.freepik.com/free-vector/new-tag-3d-vector-ribbon-banner-new-collection-badge-digital-marketing-web_40876-3389.jpg"
+                  class=" rounded-top-3 object-fit-cover mx-auto opacity-75" style="height: 10rem; width: 100%;">
+               <p class="text-center m-0 bg-success-subtle py-3 rounded-bottom-3">
+                  <a href="#" class="product-card-link text-decoration-none text-dark text-md w-100%">Upcoming
+                     Features</a>
+               </p>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- Footer start-->
+   <footer>
+      <p class="text-center bg-dark text-white fw-light p-3 my-0">&copy; 2025 <a href="index.html"
+            class="text-decoration-none text-white fw-semibold">BRANDNAME</a>. All
+         rights reserved.</p>
+   </footer>
+   <!-- Footer end-->
+   <script src="./JS/bootstrap.js"></script>
+   <script src="./JS/Index.js"></script>
+</body>
+
+</html>
