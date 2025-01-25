@@ -109,115 +109,6 @@ const ProductsData = [
         productImg:
             "https://images.unsplash.com/photo-1519566335946-7d7a7a1e5f3b?w=600&auto=format&fit=crop&q=60",
     },
-    {
-        id: 11,
-        productName: "Air Purifier",
-        category: "Home Appliances",
-        price: 300,
-        description:
-            "HEPA air purifier for clean and allergen-free air at home.",
-        brandName: "PureAir",
-        productImg:
-            "https://images.unsplash.com/photo-1600195077902-c96a5d48f9a3?w=600&auto=format&fit=crop&q=60",
-    },
-    {
-        id: 12,
-        productName: "Digital Camera",
-        category: "Photography",
-        price: 1500,
-        description:
-            "High-resolution camera with interchangeable lenses and 4K video recording.",
-        brandName: "ShutterPro",
-        productImg:
-            "https://images.unsplash.com/photo-1543149473-0c411ed34c9e?w=600&auto=format&fit=crop&q=60",
-    },
-    {
-        id: 13,
-        productName: "Wireless Speaker",
-        category: "Electronics",
-        price: 180,
-        description:
-            "Portable wireless speaker with excellent sound and long battery life.",
-        brandName: "BeatWave",
-        productImg:
-            "https://images.unsplash.com/photo-1602251557456-cd6c3c493312?w=600&auto=format&fit=crop&q=60",
-    },
-    {
-        id: 14,
-        productName: "Desk Lamp",
-        category: "Lighting",
-        price: 70,
-        description:
-            "LED desk lamp with adjustable brightness and USB charging port.",
-        brandName: "BrightLite",
-        productImg:
-            "https://images.unsplash.com/photo-1598300051229-d1e4d27d57c6?w=600&auto=format&fit=crop&q=60",
-    },
-    {
-        id: 15,
-        productName: "Electric Kettle",
-        category: "Kitchen",
-        price: 90,
-        description:
-            "Fast-boiling electric kettle with auto shut-off and stainless steel design.",
-        brandName: "HotBrew",
-        productImg:
-            "https://images.unsplash.com/photo-1517256064527-09c73fc73c82?w=600&auto=format&fit=crop&q=60",
-    },
-    {
-        id: 16,
-        productName: "Backpack",
-        category: "Accessories",
-        price: 110,
-        description:
-            "Durable and spacious backpack, perfect for travel or daily use.",
-        brandName: "CarryMore",
-        productImg:
-            "https://images.unsplash.com/photo-1507608869273-d159362ccab5?w=600&auto=format&fit=crop&q=60",
-    },
-    {
-        id: 17,
-        productName: "Table Fan",
-        category: "Home Appliances",
-        price: 80,
-        description: "Compact table fan with oscillation and speed controls.",
-        brandName: "CoolBreeze",
-        productImg:
-            "https://images.unsplash.com/photo-1599742403522-34a83aa64e9c?w=600&auto=format&fit=crop&q=60",
-    },
-    {
-        id: 18,
-        productName: "Action Camera",
-        category: "Photography",
-        price: 400,
-        description:
-            "Rugged and waterproof action camera with ultra-wide lens.",
-        brandName: "AdventureCam",
-        productImg:
-            "https://images.unsplash.com/photo-1516728778615-2d590ea1856d?w=600&auto=format&fit=crop&q=60",
-    },
-    {
-        id: 19,
-        productName: "Wireless Keyboard",
-        category: "Computers",
-        price: 70,
-        description:
-            "Compact wireless keyboard with comfortable keys and long battery life.",
-        brandName: "KeyFlow",
-        productImg:
-            "https://images.unsplash.com/photo-1547384760-7c89d7e993a1?w=600&auto=format&fit=crop&q=60",
-    },
-    {
-        id: 20,
-        productName: "Noise Cancelling Headphones",
-        category: "Electronics",
-        price: 250,
-        description:
-            "Premium headphones with active noise cancellation and rich audio.",
-        brandName: "SilenceAudio",
-        productImg:
-            "https://images.unsplash.com/photo-1557683316-973673baf926?w=600&auto=format&fit=crop&q=60",
-    },
 ];
 
 const categoryContainer = document.getElementById("categoryContainer");
@@ -237,9 +128,9 @@ const displayProducts = (products) => {
         productCard.innerHTML = `
                    <div class="card mb-2">
                        <div>
-                           <img src="${
-                               product.productImg ? product.productImg : ""
-                           }" class="w-100 card-img-top card-image" />
+                        <img src="${
+                            product.productImg ? product.productImg : ""
+                        }" class="w-100 card-img-top card-image" />
                        </div>
                        <div class="card-body">
                            <h5 class="card-title mb-1">${

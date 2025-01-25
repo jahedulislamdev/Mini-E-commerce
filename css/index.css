@@ -1,3 +1,5 @@
+/*------------------------------------Services {Home,Index} page Design-----------------------
+-------------------------------------------------------------------------------------------------*/
 #services {
     background: rgb(2, 0, 36);
     background: linear-gradient(
@@ -15,21 +17,9 @@
     font-size: 1.8rem;
 }
 
-.product-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.product-card {
-    width: 200px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.business-card {
+/* .business-card {
     margin-top: 100px !important;
-}
+} */
 .card-body img {
     height: 10rem;
     width: 100%;
@@ -39,7 +29,17 @@
     overflow: hidden;
 }
 
-/* media queries */
+/*----------------------------------------MEDIA QUERIES-------------------------------------------
+-------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 590px) {
+    .services-title {
+        font-size: 2rem !important;
+    }
+    .services-desc {
+        font-size: 0.6rem !important;
+    }
+}
 @media screen and (max-width: 768px) {
     .services-title {
         font-size: 3rem;
@@ -49,13 +49,5 @@
     }
     .product-card {
         width: 130px;
-    }
-}
-@media screen and (max-width: 590px) {
-    .services-title {
-        font-size: 2rem;
-    }
-    .services-desc {
-        font-size: 0.6rem;
     }
 }
