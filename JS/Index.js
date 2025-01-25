@@ -251,7 +251,7 @@ const displayProducts = (products) => {
                            <h6 class="mb-1">$${product.price}</h6>
                        </div>
                        <div class="card-footer d-flex justify-content-center text-muted">
-                           <a href="/pages/product_detail.html?id=${
+                           <a href="../pages/product_detail.html?id=${
                                product.id
                            }" role="button" class="productDetail me-4 btn rounded-1 btn-outline-success">Details</a>
                            <a onclick="handleCart(${

@@ -13,7 +13,7 @@
 
 <body>
    <!-- Navbar start -->
-   <nav class="navbar navbar-expand-lg shadow-sm">
+   <nav class="navbar navbar-expand-md shadow-sm">
       <div class="container-fluid">
          <a href="../index.html" class="navbar-brand fw-bold text-uppercase">BrandName</a>
          <!-- <img src="" alt=""> -->
@@ -60,18 +60,28 @@
    <!-- Navbar end -->
 
    <div class="container-fluid">
-      <div class="row py-5 px-3">
-         <div class="product-showcase col-12 col-md-6 border border-dark">
-            <img class="img-fluid m-auto"
+      <div class="row py-3 px-3">
+         <div class="product-showcase col-12 col-md-6 py-1 border">
+            <img id="displayImg" class="img-fluid m-auto rounded-1"
                src="https://www.nike.sa/dw/image/v2/BDVB_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dwfa4e2f3c/nk/274/c/a/6/8/5/274ca685_5291_4bff_99ee_de42a16d76a4.jpg?sw=700&sh=700&sm=fit&q=100&strip=false"
                alt="">
-            <div>
-               slider here...
+            <div id="pagination" class="bg-light d-flex justify-content-center align-items-center">
+               <img
+                  src="https://cdna.lystit.com/photos/urbanoutfitters/754d4b9c/fila--Fila-Uo-Exclusive-Utility-Cargo-Vest.jpeg"
+                  alt="" class="pagination-img">
+               <img src="https://static.qns.digital/img/p/2/6/5/4/0/0/2/2654002-full_product.jpg" alt=""
+                  class="pagination-img">
+               <img
+                  src="https://www.nike.ae/dw/image/v2/BDVB_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dw9978b9e4/nk/2ac/3/d/4/b/1/2ac3d4b1_c434_44f2_9905_5a0ce85a7dac.jpg?sw=700&sh=700&sm=fit&q=100&strip=false"
+                  alt="" class="pagination-img">
+               <img src="https://s.alicdn.com/@sc04/kf/H5175654929e448839fceede2cb5ca2dfJ.jpg_720x720q50.jpg" alt=""
+                  class="pagination-img">
             </div>
          </div>
-         <div class="col-12 col-md-6 border border-dark p-2">
+         <div class="product-description col-12 col-md-6 border border-s-0 px-2 py-3">
             <div class="d-flex justify-content-between">
-               <h5>32 In 1 Multipurpose Precision Screwdriver Disassemble Electronic Repair Tool</h5>
+               <h5 class="product-title">32 In 1 Multipurpose Precision Screwdriver Disassemble Electronic Repair Tool
+               </h5>
                <div class="rating fw-light text-nowrap"><i class="fa-solid fa-star text-warning"></i> 5.0</div>
             </div>
             <h5 class="fw-normal">$0000</h5>
@@ -137,6 +147,65 @@
                consectetur
                adipisicing elit. Tempore, minima?
             </small>
+            <!-- Product description and releted details -->
+            <div>
+               <div class="accordion mt-3" id="accordionExample">
+                  <div class="accordion-item">
+                     <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                           Description
+                        </button>
+                     </h2>
+                     <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           <strong>This is the first item's accordion body.</strong> It is shown by default, until the
+                           collapse plugin adds the appropriate classes that we use to style each element. These classes
+                           control the overall appearance, as well as the showing and hiding via CSS transitions. You
+                           can modify any of this with custom CSS or overriding our default variables. It's also worth
+                           noting that just about any HTML can go within the <code>.accordion-body</code>, though the
+                           transition does limit overflow.
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accordion-item">
+                     <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                           Shipping & Returns
+                        </button>
+                     </h2>
+                     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           <strong>This is the second item's accordion body.</strong> It is hidden by default, until the
+                           collapse plugin adds the appropriate classes that we use to style each element. These classes
+                           control the overall appearance, as well as the showing and hiding via CSS transitions. You
+                           can modify any of this with custom CSS or overriding our default variables. It's also worth
+                           noting that just about any HTML can go within the <code>.accordion-body</code>, though the
+                           transition does limit overflow.
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accordion-item">
+                     <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                           Details
+                        </button>
+                     </h2>
+                     <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                           collapse plugin adds the appropriate classes that we use to style each element. These classes
+                           control the overall appearance, as well as the showing and hiding via CSS transitions. You
+                           can modify any of this with custom CSS or overriding our default variables. It's also worth
+                           noting that just about any HTML can go within the <code>.accordion-body</code>, though the
+                           transition does limit overflow.
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
          </div>
       </div>
    </div>
@@ -150,7 +219,17 @@
    </footer>
    <!-- Footer end-->
    <script src="../JS/bootstrap.js"></script>
-
+   <script>
+      let displayImg = document.getElementById("displayImg");
+      // console.log(displayImg.src);
+      let paginationImg = document.querySelectorAll(".pagination-img");
+      // console.log(paginationImg[1].src);
+      paginationImg.forEach(img => {
+         img.onclick = () => {
+            displayImg.src = img.src;
+         }
+      })
+   </script>
 </body>
 
 </html>

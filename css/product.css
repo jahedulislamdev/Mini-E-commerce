@@ -1,3 +1,5 @@
+/*----------------------------------------PRODUCT PAGE DESIGN-------------------------------------
+-------------------------------------------------------------------------------------------------*/
 .card-image {
     height: 200px;
     object-fit: cover;
@@ -20,7 +22,6 @@
 #categoryContainer::-webkit-scrollbar {
     display: none;
 }
-
 .category-btn {
     color: #000;
     border-radius: 5px;
@@ -28,13 +29,13 @@
 .category-btn:hover {
     background-color: #d9d9d9;
 }
-
 .category-btn.active {
     background-color: #2260a2;
     color: #fff;
 }
 
-/* product details page design */
+/*--------------------------------PRODUCT DETAILS PAGE DESIGN-------------------------------------
+-------------------------------------------------------------------------------------------------*/
 .color-radio {
     width: 25px;
     height: 25px;
@@ -51,14 +52,52 @@
 .quantity {
     width: 25%;
 }
-.product-showcase img {
+#displayImg {
     width: 100%;
-    height: 400px;
+    height: 420px;
     object-fit: cover;
     object-position: center;
+}
+#pagination .pagination-img {
+    max-width: 100px;
+    max-height: 100px;
+    margin: 9px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/*----------------------------------------MEDIA QUERIES-------------------------------------------
+-------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 380px) {
+    .product-description .product-title {
+        font-size: 15px;
+    }
+    #displayImg {
+        max-height: 300px;
+    }
+    #pagination .pagination-img {
+        max-width: 40px;
+        max-height: 40px;
+        margin: 3px;
+    }
 }
 @media screen and (max-width: 530px) {
     .quantity {
         width: 50%;
+    }
+    #pagination .pagination-img {
+        width: 70px;
+        height: 70px;
+        margin: 7px;
+    }
+}
+@media screen and (max-width: 990px) {
+    .quantity {
+        width: 55%;
+    }
+    #pagination .pagination-img {
+        width: 80px;
+        height: 80px;
+        margin: 3px;
     }
 }
