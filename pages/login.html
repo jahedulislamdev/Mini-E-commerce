@@ -4,15 +4,14 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>BRANDNAME - All Products</title>
+   <title>BrandName - Login</title>
    <link rel="stylesheet" href="../css/utility.css">
-   <link rel="stylesheet" href="../css/product.css">
+   <link rel="stylesheet" href="../css/login.css">
    <link rel="stylesheet" href="../css/bootstrap.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
-   <!-- navbar start -->
    <nav class="navbar navbar-expand-md shadow-sm">
       <div class="container-fluid">
          <a href="../index.html" class="navbar-brand fw-bold text-uppercase">BrandName</a>
@@ -22,7 +21,7 @@
                data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
                <span class="navbar-toggler-icon"></span>
             </button>
-            <button class="btn d-md-none position-relative rounded-1 px-2 py-0" id="ShoppingBag">
+            <button class="btn d-none position-relative rounded-1 px-2 py-0" id="ShoppingBag">
                <i class="fa-solid fa-cart-shopping"></i>
                <span class="position-absolute top-0 start-100 translate-middle px-2 py-0 rounded-circle">
                   <span class="ShoppingBagCounter text-sm p-0 m-0">0</span>
@@ -39,12 +38,13 @@
                <ul class="navbar-nav ms-auto">
                   <li class="nav-item mx-4 h6"><a href="../index.html" class="nav-link px-2">Services</a>
                   </li>
-                  <li class="nav-item mx-4 h6"><a href="./product.html"
-                        class="nav-link px-2 active text-white">Products</a></li>
-                  <li class="nav-item mx-4 h6"><a href="./contact.html" class="nav-link px-2 ">Contact</a></li>
-                  <li class="nav-item mx-4 h6"><a href="./login.html" class="nav-link px-2">Login</a>
+                  <li class="nav-item mx-4 h6"><a href="./product.html" class="nav-link px-2">Products</a>
                   </li>
-                  <li class="nav-item mx-4 h6">
+                  <li class="nav-item mx-4 h6"><a href="./contact.html" class="nav-link px-2">Contact</a>
+                  </li>
+                  <li class="nav-item mx-4 h6"><a href="./login.html" class="nav-link active text-white px-2">Login</a>
+                  </li>
+                  <li class="nav-item mx-4">
                      <a href="./cart.html" class="btn d-none d-md-block position-relative rounded-1 px-2 py-0"
                         id="ShoppingBag">
                         <i class="fa-solid fa-cart-shopping"></i>
@@ -58,25 +58,6 @@
          </div>
       </div>
    </nav>
-   <!-- navbar end-->
-   <section id="productPage">
-      <div class="container">
-         <div id="categoryContainer" class="py-2"></div>
-         <div class="row" id="productList"></div>
-      </div>
-   </section>
-   <!-- Footer start-->
-   <footer>
-      <p class="text-center bg-dark text-white fw-light p-3 my-0">&copy; 2025 <a href="../index.html"
-            class="text-decoration-none text-white fw-semibold">BRANDNAME</a>. All
-         rights reserved.</p>
-   </footer>
-   <!-- Footer end-->
-   <!-- <script src="../JS/index.js"></script> -->
-   <script src="../JS/bootstrap.js"></script>
-   <script src="../JS/Index.js"></script>
-   <script src="../JS/cart.js"></script>
-
 </body>
 
 </html>

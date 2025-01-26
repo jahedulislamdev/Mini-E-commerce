@@ -14,7 +14,7 @@
 <body>
    <!-- navbar start -->
    <nav class="navbar navbar-expand-md shadow-sm">
-      <div class="container-fluid">
+      <div class="container">
          <a href="./index.html" class="navbar-brand fw-bold text-uppercase">BrandName</a>
          <!-- <img src="" alt=""> -->
          <div class="d-flex">
@@ -25,7 +25,7 @@
             <button class="btn d-none position-relative rounded-1 px-2 py-0" id="ShoppingBag">
                <i class="fa-solid fa-cart-shopping"></i>
                <span class="position-absolute top-0 start-100 translate-middle px-2 py-0 rounded-circle">
-                  <span id="ShoppingBagCounter" class="text-sm p-0 m-0 text-warning">0</span>
+                  <span class="ShoppingBagCounter text-sm p-0 m-0">0</span>
                </span>
             </button>
          </div>
@@ -44,13 +44,16 @@
                   </li>
                   <li class="nav-item mx-4 h6"><a href="./pages/contact.html" class="nav-link px-2">Contact</a>
                   </li>
+                  <li class="nav-item mx-4 h6"><a href="./pages/login.html" class="nav-link px-2">Login</a>
+                  </li>
                   <li class="nav-item mx-4">
-                     <button class="btn d-none d-md-block position-relative rounded-1 px-2 py-0" id="ShoppingBag">
+                     <a href="./pages/cart.html" class="btn d-none d-md-block position-relative rounded-1 px-2 py-0"
+                        id="ShoppingBag">
                         <i class="fa-solid fa-cart-shopping"></i>
                         <span class="position-absolute top-0 start-100 translate-middle px-2 py-0 rounded-circle">
-                           <span id="ShoppingBagCounter" class="text-sm p-0 m-0 text-warning">0</span>
+                           <span class="ShoppingBagCounter text-sm p-0 m-0">0</span>
                         </span>
-                     </button>
+                     </a>
                   </li>
                </ul>
             </div>
@@ -59,69 +62,71 @@
    </nav>
    <!-- navbar end-->
    <section id="services">
-      <div class="container-fluid">
-         <div class="row align-items-center py-5 about-text">
-            <p class="services-title col fw-semibold lh-1">Our <br> Services</p>
-            <p class="services-desc col fw-light text-end">"Discover a unique marketplace where seamless transactions
-               meet curated variety, offering you exclusive products at your fingertips."</p>
+      <div class="container">
+         <div>
+            <div class="row align-items-center py-5 about-text">
+               <p class="services-title col fw-semibold lh-1">Our <br> Services</p>
+               <p class="services-desc col fw-light text-end">"Discover a unique marketplace where seamless transactions
+                  meet curated variety, offering you exclusive products at your fingertips."</p>
+            </div>
+         </div>
+         <div class="row p-2 p-lg-5 business-card">
+            <div class="col-6 col-md-3 mt-3 mt-md-0 d-flex">
+               <div class="product-card card-body  rounded-4 border border-5 border-primary-subtle">
+                  <img
+                     src="https://img.freepik.com/free-vector/hand-customer-picking-category-internet-store-tablet-with-online-clothing-shop-screen-flat-vector-illustration-sale-online-shopping-ecommerce-concept-banner-landing-web-page_74855-24709.jpg"
+                     class=" rounded-top-3 object-fit-cover mx-auto opacity-75">
+                  <p class="text-center m-0 bg-primary-subtle py-3 rounded-bottom-3">
+                     <a href="./pages/product.html"
+                        class="product-card-link text-decoration-none text-dark text-md w-100%">Online
+                        Shopping
+                     </a>
+                  </p>
+               </div>
+            </div>
+            <div class="col-6 col-md-3 mt-3 mt-md-0 d-flex">
+               <div class="product-card card-body rounded-4 border border-5 border-primary-subtle">
+                  <img src="https://unblast.com/wp-content/uploads/2020/09/Tailor-Vector-Illustration.jpg"
+                     class=" rounded-top-3 object-fit-cover mx-auto opacity-75" style="height: 10rem; width: 100%;">
+                  <p class="text-center m-0 bg-warning-subtle py-3 rounded-bottom-3">
+                     <a href="#" class="product-card-link text-decoration-none text-dark text-md w-100%">Sarah
+                        Tailor</a>
+                  </p>
+               </div>
+            </div>
+            <div class="col-6 col-md-3 mt-3 mt-md-0 d-flex">
+               <div class="product-card card-body rounded-4 border border-5 border-primary-subtle">
+                  <img
+                     src="https://img.freepik.com/premium-vector/hand-drawn-call-center-characters-with-smartphones-concept-online-support-flat-style-isolated-background_1375-28728.jpg?semt=ais_hybrid"
+                     class=" rounded-top-3 object-fit-cover mx-auto opacity-75" style="height: 10rem; width: 100%;">
+                  <p class="text-center m-0 bg-danger-subtle py-3 rounded-bottom-3">
+                     <a href="#" class="product-card-link text-decoration-none text-dark text-md w-100%">Contact Us</a>
+                  </p>
+               </div>
+            </div>
+            <div class="col-6 col-md-3 mt-3 mt-md-0 d-flex">
+               <div class="product-card card-body rounded-4 border border-5 border-primary-subtle">
+                  <img
+                     src="https://media.istockphoto.com/id/1355378550/vector/megaphone-hand-business-concept-with-text-upcoming-events-vector-stock-illustration.jpg?s=612x612&w=0&k=20&c=D8iICHXW2Nq6RDruZvPzdsSHeo55ey8LrBoaydzM3Kk="
+                     class=" rounded-top-3 object-fit-cover mx-auto opacity-75" style="height: 10rem; width: 100%;">
+                  <p class="text-center m-0 bg-success-subtle py-3 rounded-bottom-3">
+                     <a href="#" class="product-card-link text-decoration-none text-dark text-md w-100%">Upcoming
+                        Features</a>
+                  </p>
+               </div>
+            </div>
          </div>
       </div>
-      <div class="row p-2 p-lg-5 business-card">
-         <div class="col-6 col-md-3 mt-3 mt-md-0 d-flex">
-            <div class="product-card card-body  rounded-4 border border-5 border-primary-subtle">
-               <img
-                  src="https://img.freepik.com/free-vector/hand-customer-picking-category-internet-store-tablet-with-online-clothing-shop-screen-flat-vector-illustration-sale-online-shopping-ecommerce-concept-banner-landing-web-page_74855-24709.jpg"
-                  class=" rounded-top-3 object-fit-cover mx-auto opacity-75">
-               <p class="text-center m-0 bg-primary-subtle py-3 rounded-bottom-3">
-                  <a href="./pages/product.html"
-                     class="product-card-link text-decoration-none text-dark text-md w-100%">Online
-                     Shopping
-                  </a>
-               </p>
-            </div>
-         </div>
-         <div class="col-6 col-md-3 mt-3 mt-md-0 d-flex">
-            <div class="product-card card-body rounded-4 border border-5 border-primary-subtle">
-               <img src="https://unblast.com/wp-content/uploads/2020/09/Tailor-Vector-Illustration.jpg"
-                  class=" rounded-top-3 object-fit-cover mx-auto opacity-75" style="height: 10rem; width: 100%;">
-               <p class="text-center m-0 bg-warning-subtle py-3 rounded-bottom-3">
-                  <a href="#" class="product-card-link text-decoration-none text-dark text-md w-100%">Sarah Tailor</a>
-               </p>
-            </div>
-         </div>
-         <div class="col-6 col-md-3 mt-3 mt-md-0 d-flex">
-            <div class="product-card card-body rounded-4 border border-5 border-primary-subtle">
-               <img
-                  src="https://img.freepik.com/premium-vector/hand-drawn-call-center-characters-with-smartphones-concept-online-support-flat-style-isolated-background_1375-28728.jpg?semt=ais_hybrid"
-                  class=" rounded-top-3 object-fit-cover mx-auto opacity-75" style="height: 10rem; width: 100%;">
-               <p class="text-center m-0 bg-danger-subtle py-3 rounded-bottom-3">
-                  <a href="#" class="product-card-link text-decoration-none text-dark text-md w-100%">Contact Us</a>
-               </p>
-            </div>
-         </div>
-         <div class="col-6 col-md-3 mt-3 mt-md-0 d-flex">
-            <div class="product-card card-body rounded-4 border border-5 border-primary-subtle">
-               <img
-                  src="https://media.istockphoto.com/id/1355378550/vector/megaphone-hand-business-concept-with-text-upcoming-events-vector-stock-illustration.jpg?s=612x612&w=0&k=20&c=D8iICHXW2Nq6RDruZvPzdsSHeo55ey8LrBoaydzM3Kk="
-                  class=" rounded-top-3 object-fit-cover mx-auto opacity-75" style="height: 10rem; width: 100%;">
-               <p class="text-center m-0 bg-success-subtle py-3 rounded-bottom-3">
-                  <a href="#" class="product-card-link text-decoration-none text-dark text-md w-100%">Upcoming
-                     Features</a>
-               </p>
-            </div>
-         </div>
-      </div>
-
    </section>
    <!-- Footer start-->
    <footer>
-      <p class="text-center bg-dark text-white fw-light p-3 my-0">&copy; 2025 <a href="index.html"
-            class="text-decoration-none text-white fw-semibold">BRANDNAME</a>. All
+      <p class="text-center bg-dark fw-light p-3 my-0">&copy; 2025 <a href="index.html"
+            class="text-decoration-none fw-semibold">BRANDNAME</a>. All
          rights reserved.</p>
    </footer>
    <!-- Footer end-->
    <script src="./JS/bootstrap.js"></script>
-   <script src="./JS/Index.js"></script>
+   <script src="./JS/cart.js"></script>
 </body>
 
 </html>

@@ -133,21 +133,16 @@ const displayProducts = (products) => {
                         }" class="w-100 card-img-top card-image" />
                        </div>
                        <div class="card-body">
-                           <h5 class="card-title mb-1">${
+                           <h5 class="card-title mb-1 text-center">${
                                product.productName
                            }</h5>
-                           <p class="fw-light text-sm mb-1">${
-                               product.category
-                           }</p>
-                           <h6 class="mb-1">$${product.price}</h6>
+                           <h6 class="mb-1 text-center">$${product.price}</h6>
                        </div>
-                       <div class="card-footer d-flex justify-content-center text-muted">
+                       <div class="card-footer border-0 d-flex justify-content-center text-muted">
                            <a href="../pages/product_detail.html?id=${
                                product.id
-                           }" role="button" class="productDetail me-4 btn rounded-1 btn-outline-success">Details</a>
-                           <a onclick="handleCart(${
-                               product.id
-                           })" href="#" role="button" class="AddToCart btn rounded-1 btn-outline-danger">Add to Cart</a>
+                           }" role="button" class="productDetail me-4 btn rounded-1 bg-secondary-subtle">Details</a>
+                           <a onclick=""  role="button" class="AddToCart text-nowrap overflow-hidden btn rounded-1 bg-secondary text-white">Add to Cart</a>
                        </div>
                    </div>
        `;

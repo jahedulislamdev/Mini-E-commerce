@@ -25,7 +25,7 @@
             <button class="btn d-md-none position-relative rounded-1 px-2 py-0" id="ShoppingBag">
                <i class="fa-solid fa-briefcase"></i>
                <span class="position-absolute top-0 start-100 translate-middle px-2 py-0 rounded-circle">
-                  <span id="ShoppingBagCounter" class="text-sm p-0 m-0 text-warning">0</span>
+                  <span class="ShoppingBagCounter text-sm p-0 m-0">0</span>
                </span>
             </button>
          </div>
@@ -44,11 +44,13 @@
                   </li>
                   <li class="nav-item mx-4 h6"><a href="./contact.html" class="nav-link px-2">Contact</a>
                   </li>
+                  <li class="nav-item mx-4 h6"><a href="./login.html" class="nav-link px-2">Login</a>
+                  </li>
                   <li class="nav-item mx-4">
                      <button class="btn d-none d-md-block position-relative rounded-1 px-2 py-0" id="ShoppingBag">
                         <i class="fa-solid fa-briefcase"></i>
                         <span class="position-absolute top-0 start-100 translate-middle px-2 py-0 rounded-circle">
-                           <span id="ShoppingBagCounter" class="text-sm p-0 m-0 text-warning">0</span>
+                           <span class="ShoppingBagCounter text-sm p-0 m-0">0</span>
                         </span>
                      </button>
                   </li>
@@ -59,7 +61,7 @@
    </nav>
    <!-- Navbar end -->
 
-   <div class="container-fluid">
+   <div class="container-fluid" style="background: rgba(132, 173, 222, 0.126);">
       <div class="row py-3 px-3">
          <div class="product-showcase col-12 col-md-6 py-1 border">
             <img id="displayImg" class="img-fluid m-auto rounded-1"
@@ -135,14 +137,14 @@
             </div>
             <!-- product quantity -->
             <div class="quantity my-2 p-1 rounded-2 border d-flex justify-content-center align-items-center">
-               <button class="btn border bg-primary-subtle fw-semibold py-1 m-0 me-2">-</button>
-               <button class="btn disabled border-0" role="doc-notice">0</button>
-               <button class="btn border bg-primary-subtle fw-semibold py-1 m-0 ms-2">+</button>
+               <button id="decrementQuantity" class="btn border bg-primary-subtle fw-semibold py-1 m-0 me-2">-</button>
+               <button id="quantityFigure" class="btn disabled border-0" role="doc-notice">0</button>
+               <button id="incrementQuantity" class="btn border bg-primary-subtle fw-semibold py-1 m-0 ms-2">+</button>
             </div>
             <!-- buy or add to cart btn -->
             <div>
                <button class="btn btn-outline-primary rounded-0 px-4">Buy Now</button>
-               <button class="btn bg-warning rounded-0 px-4">Add to Cart</button>
+               <button class="btn bg-warning rounded-0 px-4 AddToCart">Add to Cart</button>
             </div>
             <small class="fw-light text-muted mt-2 lh-sm d-block">A short description. Lorem ipsum dolor sit amet,
                consectetur
@@ -219,17 +221,16 @@
                      class="w-100 card-img-top card-image" />
                </div>
                <div class="card-body">
-                  <h5 class="card-title mb-1">
+                  <h5 class="card-title mb-1 text-center">
                      product: productName
                   </h5>
-                  <p class="fw-light text-sm mb-1"> product category</p>
-                  <h6 class="mb-1">$160</h6>
+                  <h6 class="mb-1 text-center">$160</h6>
                </div>
-               <div class="card-footer d-flex justify-content-center text-muted">
+               <div class="card-footer border-0 d-flex justify-content-center text-muted">
                   <a href="./product_detail.html" role="button"
-                     class="productDetail me-4 btn rounded-1 btn-outline-success">Details</a>
-                  <a onclick="handleCart()" href="#" role="button"
-                     class="AddToCart btn rounded-1 btn-outline-danger">Add to Cart</a>
+                     class="productDetail me-4 btn rounded-1 bg-secondary-subtle">Details</a>
+                  <a href="#" role="button" class="AddToCart btn rounded-1 btn-secondary text-nowrap">Add to
+                     Cart</a>
                </div>
             </div>
          </div>
@@ -241,17 +242,16 @@
                      class="w-100 card-img-top card-image" />
                </div>
                <div class="card-body">
-                  <h5 class="card-title mb-1">
+                  <h5 class="card-title mb-1 text-center">
                      product: productName
                   </h5>
-                  <p class="fw-light text-sm mb-1"> product category</p>
-                  <h6 class="mb-1">$160</h6>
+                  <h6 class="mb-1 text-center">$160</h6>
                </div>
-               <div class="card-footer d-flex justify-content-center text-muted">
+               <div class="card-footer border-0 d-flex justify-content-center text-muted">
                   <a href="./product_detail.html" role="button"
-                     class="productDetail me-4 btn rounded-1 btn-outline-success">Details</a>
-                  <a onclick="handleCart()" href="#" role="button"
-                     class="AddToCart btn rounded-1 btn-outline-danger">Add to Cart</a>
+                     class="productDetail me-4 btn rounded-1 bg-secondary-subtle">Details</a>
+                  <a href="#" role="button" class="AddToCart btn rounded-1 btn-secondary text-nowrap">Add to
+                     Cart</a>
                </div>
             </div>
          </div>
@@ -263,17 +263,16 @@
                      class="w-100 card-img-top card-image" />
                </div>
                <div class="card-body">
-                  <h5 class="card-title mb-1">
+                  <h5 class="card-title mb-1 text-center">
                      product: productName
                   </h5>
-                  <p class="fw-light text-sm mb-1"> product category</p>
-                  <h6 class="mb-1">$160</h6>
+                  <h6 class="mb-1 text-center">$160</h6>
                </div>
-               <div class="card-footer d-flex justify-content-center text-muted">
+               <div class="card-footer border-0 d-flex justify-content-center text-muted">
                   <a href="./product_detail.html" role="button"
-                     class="productDetail me-4 btn rounded-1 btn-outline-success">Details</a>
-                  <a onclick="handleCart()" href="#" role="button"
-                     class="AddToCart btn rounded-1 btn-outline-danger">Add to Cart</a>
+                     class="productDetail me-4 btn rounded-1 bg-secondary-subtle">Details</a>
+                  <a href="#" role="button" class="AddToCart btn rounded-1 btn-secondary text-nowrap">Add to
+                     Cart</a>
                </div>
             </div>
          </div>
@@ -285,17 +284,16 @@
                      class="w-100 card-img-top card-image" />
                </div>
                <div class="card-body">
-                  <h5 class="card-title mb-1">
+                  <h5 class="card-title mb-1 text-center">
                      product: productName
                   </h5>
-                  <p class="fw-light text-sm mb-1"> product category</p>
-                  <h6 class="mb-1">$160</h6>
+                  <h6 class="mb-1 text-center">$160</h6>
                </div>
-               <div class="card-footer d-flex justify-content-center text-muted">
+               <div class="card-footer border-0 d-flex justify-content-center text-muted">
                   <a href="./product_detail.html" role="button"
-                     class="productDetail me-4 btn rounded-1 btn-outline-success">Details</a>
-                  <a onclick="handleCart()" href="#" role="button"
-                     class="AddToCart btn rounded-1 btn-outline-danger">Add to Cart</a>
+                     class="productDetail me-4 btn rounded-1 bg-secondary-subtle">Details</a>
+                  <a href="#" role="button" class="AddToCart btn rounded-1 btn-secondary text-nowrap">Add to
+                     Cart</a>
                </div>
             </div>
          </div>
@@ -311,17 +309,8 @@
    </footer>
    <!-- Footer end-->
    <script src="../JS/bootstrap.js"></script>
-   <script>
-      let displayImg = document.getElementById("displayImg");
-      // console.log(displayImg.src);
-      let paginationImg = document.querySelectorAll(".pagination-img");
-      // console.log(paginationImg[1].src);
-      paginationImg.forEach(img => {
-         img.onclick = () => {
-            displayImg.src = img.src;
-         }
-      })
-   </script>
+   <script src="../JS/detailpage.js"> </script>
+   <script src="../JS/cart.js"></script>
 </body>
 
 </html>

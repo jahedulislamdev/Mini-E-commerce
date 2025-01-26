@@ -3,15 +3,22 @@
 * {
     scroll-behavior: smooth;
 }
+#productPage {
+    background: rgba(132, 172, 222, 0.215);
+}
+.card {
+    background: #8b8b8b23 !important;
+}
 .card-image {
-    height: 200px;
+    max-height: 180px;
     object-fit: cover;
+    cursor: pointer;
 }
 .category-btn {
     margin: 5px;
     padding: 10px;
     border: none;
-    background-color: #f0f0f0;
+    background-color: #adcfee7f;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
@@ -28,9 +35,11 @@
 .category-btn {
     color: #000;
     border-radius: 5px;
+    /* transition: background-color 0.3s; */
 }
 .category-btn:hover {
-    background-color: #d9d9d9;
+    background-color: #4d82bb;
+    color: #fff;
 }
 .category-btn.active {
     background-color: #2260a2;
