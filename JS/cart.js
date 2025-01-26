@@ -1,3 +1,4 @@
+//------------------------------------------------{temporary}-----------------------------------------------//
 //increse quantity {counter function}
 let ShoppingBagCounter = document.querySelectorAll(".ShoppingBagCounter");
 let AddToCartButton = document.querySelectorAll(".AddToCart");
@@ -11,13 +12,14 @@ AddToCartButton.forEach((btn) => {
         });
     });
 });
-// Handle the removal of products from the cart {temporary}
+// Handle the removal of products from the table
 document.querySelectorAll(".btn-remove").forEach((btn) => {
     btn.addEventListener("click", (event) => {
         const row = event.target.closest("tr");
         row.remove();
     });
 });
+//------------------------------------------------{temporary}-----------------------------------------------//
 
 // cart data stractue
 let cart = [];

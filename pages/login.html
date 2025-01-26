@@ -10,6 +10,22 @@
    <link rel="stylesheet" href="../css/bootstrap.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
+<style>
+   .login-section {
+      min-height: 90dvh;
+      width: 50%;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   @media screen and (max-width: 768px) {
+      .login-section {
+         width: 100%;
+      }
+   }
+</style>
 
 <body>
    <nav class="navbar navbar-expand-md shadow-sm">
@@ -58,6 +74,30 @@
          </div>
       </div>
    </nav>
+
+   <div style="background: #cec6dd33;">
+      <section class="login-section">
+         <div class="container rounded-1 p-3">
+            <form class="shadow-sm border p-4 rounded-1">
+               <h4 class="fw-semibold mb-4 text-center text-secondary">Login</h4>
+               <div class="mb-3">
+                  <input type="email" class="form-control py-3" name="email" placeholder="example@email.com" required>
+               </div>
+               <div class="mb-3">
+                  <input type="password" class="form-control py-3" name="password" placeholder="Password" required>
+               </div>
+               <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="userCheck">
+                  <label class="form-check-label" for="userCheck">Check me out</label>
+               </div>
+               <p class="d-grid mb-1 "><button type="submit" class="btn btn-secondary">Submit</button></p>
+               <p class="ps-1 m-0">Don&apos;t have an Account? <a
+                     class="text-secondary fw-semibold text-decoration-none" href="./registration.html">Register</a></p>
+            </form>
+         </div>
+      </section>
+   </div>
+
 </body>
 
 </html>
