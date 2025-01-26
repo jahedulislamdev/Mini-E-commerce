@@ -25,7 +25,7 @@
                      <th>PRICE</th>
                      <th>QUANTITY</th>
                      <th>SUBTOTAL</th>
-                     <th>ACTION</th>
+                     <!-- <th>ACTION</th> -->
                   </tr>
                </thead>
                <tbody id="cartTableBody">
@@ -33,18 +33,18 @@
                      <td class="d-flex align-items-center">
                         <img
                            src="https://believerssign.com/wp-content/uploads/2024/12/QVVuuAq3gc8Nxwv4Q_--2048x2048.webp"
-                           alt="Product Image" class="cart-img me-3 img-fluid h-25 w-25 rounded" />
+                           alt="Product Image" class="cart-img me-3 img-fluid rounded" />
                         <span>3 Layer Single Part Jacket - Olive - XL</span>
                      </td>
-                     <td>990৳</td>
+                     <td>000৳</td>
                      <td>
                         <div class="d-flex align-items-center">
                            <button class="btn btn-outline-secondary btn-sm">-</button>
-                           <span class="mx-2">2</span>
+                           <span class="mx-2">0</span>
                            <button class="btn btn-outline-secondary btn-sm">+</button>
                         </div>
                      </td>
-                     <td>1,980৳</td>
+                     <td>0000৳</td>
                      <td>
                         <button class="btn-remove">&times;</button>
                      </td>
@@ -53,18 +53,18 @@
                      <td class="d-flex align-items-center">
                         <img
                            src="https://believerssign.com/wp-content/uploads/2024/12/QVVuuAq3gc8Nxwv4Q_--2048x2048.webp"
-                           alt="Product Image" class="cart-img me-3 img-fluid h-25 w-25 rounded" />
+                           alt="Product Image" class="cart-img me-3 img-fluid rounded" />
                         <span>3 Layer Single Part Jacket - Olive - XL</span>
                      </td>
-                     <td>990৳</td>
+                     <td>000৳</td>
                      <td>
                         <div class="d-flex align-items-center">
                            <button class="btn btn-outline-secondary btn-sm">-</button>
-                           <span class="mx-2">2</span>
+                           <span class="mx-2">0</span>
                            <button class="btn btn-outline-secondary btn-sm">+</button>
                         </div>
                      </td>
-                     <td>1,980৳</td>
+                     <td>0000৳</td>
                      <td>
                         <button class="btn-remove">&times;</button>
                      </td>
@@ -78,36 +78,29 @@
                <h5 class="mb-4">Cart Summary</h5>
                <p class="d-flex justify-content-between">
                   <span>Subtotal</span>
-                  <span id="subtotal">1,980৳</span>
+                  <span id="subtotal">000৳</span>
                </p>
                <p class="d-flex justify-content-between">
                   <span>Shipping</span>
-                  <span>
-                     <a href="#" class="text-decoration-underline">Calculate shipping</a>
-                  </span>
+                  <span id="shippingFee">000৳</span>
                </p>
-               <p class="d-flex justify-content-between">
+               <div class="input-group mb-3">
+                  <button class="input-group-text" id="basic-addon2">Apply Coupon</button>
+                  <input type="text" id="couponCode" class="form-control" placeholder="Recipient's username"
+                     aria-label="Recipient's username" aria-describedby="basic-addon2">
+               </div>
+               <p class="m-0 p-0">get <span id="discount"></span>৳ Discount</p>
+               <p class="d-flex justify-content-between mt-5">
                   <strong>Total</strong>
-                  <strong id="total">1,980৳</strong>
+                  <strong id="total">000৳</strong>
                </p>
                <button class="btn btn-secondary w-100 mt-4">PROCEED TO CHECKOUT</button>
             </div>
          </div>
       </div>
    </div>
-   <script>
-      // Handle the removal of products from the cart
-      document.querySelectorAll('.btn-remove').forEach((btn) => {
-         btn.addEventListener('click', (event) => {
-            const row = event.target.closest('tr');
-            row.remove();
-
-            // Optionally, update subtotal and total dynamically (not implemented here)
-            console.log("Product removed!");
-         });
-      });
-   </script>
    <script src="../JS/bootstrap.js"></script>
+   <script src="../JS/cart.js"></script>
 </body>
 
 </html>
