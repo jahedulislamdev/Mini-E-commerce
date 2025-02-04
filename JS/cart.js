@@ -1,6 +1,6 @@
 //------------------------------------------------{temporary}-----------------------------------------------//
 //increse quantity {counter function}
-let ShoppingBagCounter = document.querySelectorAll(".ShoppingBagCounter");
+/*let ShoppingBagCounter = document.querySelectorAll(".ShoppingBagCounter");
 let AddToCartButton = document.querySelectorAll(".AddToCart");
 
 let initialQuantityOfProduct = 0;
@@ -20,7 +20,7 @@ document.querySelectorAll(".btn-remove").forEach((btn) => {
     });
 });
 //------------------------------------------------{temporary}-----------------------------------------------//
-
+*/
 // cart data stractue
 let cart = [];
 // Add to cart
@@ -65,5 +65,6 @@ const calculatePrice = () => {
     document.getElementById("total").textContent = total.toFixed(2);
     document.getElementById("discount").textContent = discountRate.toFixed(2);
 };
+
 // Apply copun code
 // update cart display

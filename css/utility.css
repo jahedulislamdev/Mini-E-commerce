@@ -7,30 +7,19 @@
 .reguler-btn {
     background: rgba(83, 63, 106, 0.884);
 }
-.bg {
-    /* background-color: linear-gradient(to right , #009 245 , #FCEE21);
-background-color: linear-gradient(161deg, #E2871C 0%, rgba(77, 65, 6, 0.00) 100%);
-background-color: linear-gradient(161deg, #E21CE2 0%, rgba(77, 6, 55, 0.00) 100%);
-background-color: linear-gradient(161deg, #371CE2 0%, rgba(37, 6, 77, 0.00) 100%); */
-}
 nav {
-    background: #90c2e960;
+    background: #273153;
 }
-/* .navbar .nav-item:hover {
-    background: #576c621d;
-    transition: 0.4s;
-    border-radius: 7px;
-} */
-.navbar .nav-item .active {
-    background: rgba(83, 63, 106, 0.884);
-    border-radius: 4px;
-    color: #fff;
+nav .nav-item .nav-link {
+    color: #ffffff86;
 }
-.navbar .nav-item .nav-link {
-    color: #080606ca;
-}
-.navbar .nav-item .active:hover {
-    background: rgba(83, 63, 106, 0.884);
+nav .nav-item .nav-link.active {
+    color: #ddd;
+    font-weight: 600;
+    /* background: #bcacac11; */
+    /* border-bottom: 2px solid #fff; */
+    text-shadow: #6c85d8;
+    /* border-radius: 5px; */
 }
 #ShoppingBag {
     font-size: 1.3rem;

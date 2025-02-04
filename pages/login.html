@@ -6,7 +6,6 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>BrandName - Login</title>
    <link rel="stylesheet" href="../css/utility.css">
-   <link rel="stylesheet" href="../css/login.css">
    <link rel="stylesheet" href="../css/bootstrap.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
@@ -28,53 +27,9 @@
 </style>
 
 <body>
-   <nav class="navbar navbar-expand-md shadow-sm">
-      <div class="container-fluid">
-         <a href="../index.html" class="navbar-brand fw-bold text-uppercase">BrandName</a>
-         <!-- <img src="" alt=""> -->
-         <div class="d-flex">
-            <button class="btn navbar-toggler" type="button" data-bs-toggle="offcanvas"
-               data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
-               <span class="navbar-toggler-icon"></span>
-            </button>
-            <button class="btn d-none position-relative rounded-1 px-2 py-0" id="ShoppingBag">
-               <i class="fa-solid fa-cart-shopping"></i>
-               <span class="position-absolute top-0 start-100 translate-middle px-2 py-0 rounded-circle">
-                  <span class="ShoppingBagCounter text-sm p-0 m-0">0</span>
-               </span>
-            </button>
-         </div>
-         <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
-            aria-labelledby="offcanvasWithBothOptionsLabel">
-            <div class="offcanvas-header">
-               <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">BRANDNAME</h5>
-               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-               <ul class="navbar-nav ms-auto">
-                  <li class="nav-item mx-4 h6"><a href="../index.html" class="nav-link px-2">Services</a>
-                  </li>
-                  <li class="nav-item mx-4 h6"><a href="./product.html" class="nav-link px-2">Products</a>
-                  </li>
-                  <li class="nav-item mx-4 h6"><a href="./contact.html" class="nav-link px-2">Contact</a>
-                  </li>
-                  <li class="nav-item mx-4 h6"><a href="./login.html" class="nav-link active text-white px-2">Login</a>
-                  </li>
-                  <li class="nav-item mx-4">
-                     <a href="./cart.html" class="btn d-none d-md-block position-relative rounded-1 px-2 py-0"
-                        id="ShoppingBag">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <span class="position-absolute top-0 start-100 translate-middle px-2 py-0 rounded-circle">
-                           <span class="ShoppingBagCounter text-sm p-0 m-0">0</span>
-                        </span>
-                     </a>
-                  </li>
-               </ul>
-            </div>
-         </div>
-      </div>
-   </nav>
-
+   <!-- navbar start -->
+   <div id="header"></div>
+   <!-- navbar end -->
    <div style="background: #cec6dd33;">
       <section class="login-section">
          <div class="container rounded-1 p-3">
@@ -96,8 +51,9 @@
             </form>
          </div>
       </section>
+      <div id="footer"></div>
    </div>
-
+   <script src="../JS/utility.js"></script>
 </body>
 
 </html>

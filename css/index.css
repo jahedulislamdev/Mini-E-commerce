@@ -1,7 +1,7 @@
 /*------------------------------------Services {Home,Index} page Design-----------------------
 -------------------------------------------------------------------------------------------------*/
 #services {
-    background: rgba(132, 172, 222, 0.215);
+    background-image: linear-gradient(to right, #dedffe68, #7691eb9d);
     overflow: hidden;
 }
 .services-title {
