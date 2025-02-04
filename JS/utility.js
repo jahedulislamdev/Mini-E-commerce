@@ -10,8 +10,8 @@ const loadComponents = (id, fileName, callback) => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-    loadComponents("header", "../components/navbar.html", highlightActiveLink);
-    loadComponents("footer", "../components/footer.html");
+    loadComponents("header", "components/navbar.html", highlightActiveLink);
+    loadComponents("footer", "components/footer.html");
 });
 
 // Highlight active nav link
