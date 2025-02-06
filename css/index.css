@@ -1,29 +1,48 @@
-/*------------------------------------Services {Home,Index} page Design-----------------------
--------------------------------------------------------------------------------------------------*/
+/*------------------------------------ Services {Home, Index} Page Design ----------------------- */
 #services {
     background-image: linear-gradient(to right, #dedffe68, #7691eb9d);
     overflow: hidden;
+    padding: 50px 0;
 }
 .services-title {
     font-size: 4rem;
+    font-weight: bold;
+    color: #333;
 }
 .services-desc {
     font-size: 1.8rem;
+    text-align: center;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
 }
-
-/* .business-card {
-    margin-top: 100px !important;
-} */
 .card-body img {
     height: 10rem;
     width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    cursor: pointer;
 }
+
+/* Product Card */
 .product-card {
     text-wrap: nowrap;
     overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/*----------------------------------------MEDIA QUERIES-------------------------------------------
+/* Product Card Hover */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/*------------------------------------------MEDIA QUERIES-------------------------------------------
 -------------------------------------------------------------------------------------------------*/
 
 @media screen and (max-width: 590px) {

@@ -21,7 +21,8 @@ nav .nav-item .nav-link.active {
     text-shadow: #6c85d8;
     /* border-radius: 5px; */
 }
-#ShoppingBag {
+#desktopCartButton,
+#mobileCartOffcanvas {
     font-size: 1.3rem;
     border: 1px solid #37373873;
 }

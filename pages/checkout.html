@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Cart Section</title>
+   <link rel="stylesheet" href="../css/cart.css">
+   <link rel="stylesheet" href="../css/bootstrap.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+   <div class="container-fluid my-5 px-4">
+      <div class="row">
+         <!-- Product Section -->
+         <p><a href="./product.html" style="font-size: 14px;"
+               class="text-decoration-none bg-secondary text-white py-2 px-3 rounded-1 d-inline-block mb">
+               <i class="fa-solid fa-chevron-left"></i> Continue Shopping</a></p>
+         <div class="col-lg-8">
+            <table class="table cart-table">
+               <thead>
+                  <tr>
+                     <th>PRODUCT</th>
+                     <th>PRICE</th>
+                     <th>QUANTITY</th>
+                     <th>SUBTOTAL</th>
+                     <!-- <th>ACTION</th> -->
+                  </tr>
+               </thead>
+               <tbody id="cartTableBody">
+                  <tr>
+                     <td class="d-flex align-items-center">
+                        <img
+                           src="https://believerssign.com/wp-content/uploads/2024/12/QVVuuAq3gc8Nxwv4Q_--2048x2048.webp"
+                           alt="Product Image" class="cart-img me-3 img-fluid rounded" />
+                        <span>3 Layer Single Part Jacket - Olive - XL</span>
+                     </td>
+                     <td>000৳</td>
+                     <td>
+                        <div class="d-flex align-items-center">
+                           <button class="btn btn-outline-secondary btn-sm">-</button>
+                           <span class="mx-2">0</span>
+                           <button class="btn btn-outline-secondary btn-sm">+</button>
+                        </div>
+                     </td>
+                     <td>0000৳</td>
+                     <td>
+                        <button class="btn-remove">&times;</button>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="d-flex align-items-center">
+                        <img
+                           src="https://believerssign.com/wp-content/uploads/2024/12/QVVuuAq3gc8Nxwv4Q_--2048x2048.webp"
+                           alt="Product Image" class="cart-img me-3 img-fluid rounded" />
+                        <span>3 Layer Single Part Jacket - Olive - XL</span>
+                     </td>
+                     <td>000৳</td>
+                     <td>
+                        <div class="d-flex align-items-center">
+                           <button class="btn btn-outline-secondary btn-sm">-</button>
+                           <span class="mx-2">0</span>
+                           <button class="btn btn-outline-secondary btn-sm">+</button>
+                        </div>
+                     </td>
+                     <td>0000৳</td>
+                     <td>
+                        <button class="btn-remove">&times;</button>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <!-- Cart Totals Section -->
+         <div class="col-lg-4">
+            <div class="cart-summary">
+               <h5 class="mb-4">Cart Summary</h5>
+               <p class="d-flex justify-content-between">
+                  <span>Sub-Total</span>
+                  <span id="subtotal">000৳</span>
+               </p>
+               <p class="d-flex justify-content-between">
+                  <span>Shipping</span>
+                  <span id="shippingFee">000৳</span>
+               </p>
+               <div class="input-group mb-1">
+                  <button class="input-group-text btn btn-secondary" id="basic-addon2">Apply Coupon</button>
+                  <input type="text" id="couponCode" class="form-control" placeholder="Coupon code"
+                     aria-label="Recipient's username" aria-describedby="basic-addon2">
+               </div>
+               <p class="m-0 p-0 text-success">Save<span id="discount"> 000</span>৳</p>
+               <p class="d-flex justify-content-between mt-5">
+                  <strong>Total</strong>
+                  <strong id="total">000৳</strong>
+               </p>
+               <button class="btn btn-secondary w-100 mt-4">PROCEED TO CHECKOUT</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src="../JS/bootstrap.js"></script>
+   <script src="../JS/cart.js"></script>
+</body>
+
+</html>

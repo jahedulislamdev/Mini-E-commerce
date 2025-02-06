@@ -38,12 +38,22 @@
                <div class="mb-3">
                   <input type="email" class="form-control py-3" name="email" placeholder="example@email.com" required>
                </div>
-               <div class="mb-3">
-                  <input type="password" class="form-control py-3" name="password" placeholder="Password" required>
+               <div class="mb-2 input-group">
+                  <input type="password" class="form-control py-3" id="passwordField" name="password"
+                     placeholder="Password" required>
+                  <button class="btn bg-white border border-start-0" type="button" id="togglePassword">
+                     <i class="fa-regular fa-eye"></i>
+                  </button>
                </div>
-               <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input" id="userCheck">
-                  <label class="form-check-label" for="userCheck">Check me out</label>
+               <div class="mb-4 form-check d-flex justify-content-between">
+                  <div>
+                     <input type="checkbox" class="form-check-input" id="userCheck">
+                     <label class="form-check-label" for="userCheck">Check me out</label>
+                  </div>
+                  <div>
+                     <a href="#" class="m-1 link-opacity-50 text-decoration-none">Forget
+                        password?</a>
+                  </div>
                </div>
                <p class="d-grid mb-1 "><button type="submit" class="btn btn-secondary">Submit</button></p>
                <p class="ps-1 m-0">Don&apos;t have an Account? <a
@@ -53,7 +63,24 @@
       </section>
       <div id="footer"></div>
    </div>
+   <script src="../JS/bootstrap.js"></script>
    <script src="../JS/utility.js"></script>
+   <script>
+      document.getElementById("togglePassword").addEventListener("click", function () {
+         const passwordField = document.getElementById("passwordField");
+         const icon = this.querySelector("i");
+
+         if (passwordField.type === "password") {
+            passwordField.type = "text";
+            icon.classList.remove("fa-eye");
+            icon.classList.add("fa-eye-slash");
+         } else {
+            passwordField.type = "password";
+            icon.classList.remove("fa-eye-slash");
+            icon.classList.add("fa-eye");
+         }
+      });
+   </script>
 </body>
 
 </html>

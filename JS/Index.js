@@ -127,7 +127,7 @@ const displayProducts = (products) => {
         );
         productCard.innerHTML = `
                    <div class="card mb-2">
-                       <div>
+                       <div class="img-container">
                         <img src="${
                             product.productImg ? product.productImg : ""
                         }" class="w-100 card-img-top card-image" />
@@ -138,11 +138,11 @@ const displayProducts = (products) => {
                            }</h5>
                            <h6 class="mb-1 text-center">$${product.price}</h6>
                        </div>
-                       <div class="card-footer border-0 d-flex justify-content-center text-muted">
+                       <div class="pb-3 px-2 btn-group border-0 d-flex justify-content-center text-muted">
                            <a href="../pages/product_detail.html?id=${
                                product.id
-                           }" role="button" class="productDetail me-4 btn rounded-1 bg-secondary-subtle">Details</a>
-                           <a onclick=""  role="button" class="AddToCart text-nowrap overflow-hidden btn rounded-1 bg-secondary text-white">Add to Cart</a>
+                           }" role="button" class="productDetail btn rounded-1 btn rounded-end-0 border border-end-0">Details</a>
+                           <a role="button" class="AddToCart text-nowrap overflow-hidden btn border rounded-start-0 rounded-1"><i class="fa-solid fa-cart-plus"></i> Add to Cart</a>
                        </div>
                    </div>
        `;
