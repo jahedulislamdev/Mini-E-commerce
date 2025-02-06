@@ -1,10 +1,7 @@
-// dynamically load components (navbar, footer, offcanvas)
+// Dynamically load components (navbar, footer, offcanvas)
+let basePath = window.location.pathname.includes("/pages/") ? "../" : "./";
 
-let basePath = window.location.pathname.includes("/pages/") ? "../" : "";
 const loadComponents = (id, fileName, callback) => {
-    // Adjust the path based on the current page's directory
-
-    // Fetch the HTML component and insert it into the specified ID
     fetch(basePath + fileName)
         .then((response) => response.text())
         .then((data) => {
@@ -14,25 +11,25 @@ const loadComponents = (id, fileName, callback) => {
         .catch((err) => console.error("Loading failed: " + fileName, err));
 };
 
-// Automatically load the components when the page is ready
+// Load components on DOMContentLoaded
 document.addEventListener("DOMContentLoaded", () => {
     loadComponents("header", "components/navbar.html", highlightActiveLink);
     loadComponents("footer", "components/footer.html");
-    loadComponents("mobileCartOffcanvas", "/pages/cart.html");
-    loadComponents("desktopCartOffcanvas", "/pages/cart.html");
+    loadComponents("mobileCartOffcanvas", basePath + "pages/cart.html");
+    loadComponents("desktopCartOffcanvas", basePath + "pages/cart.html");
 });
-
-// Function to load cart offcanvas when cart button is clicked
 
 // Highlight the active navigation link based on the current page
 const highlightActiveLink = () => {
-    const currentPage = window.location.pathname.split("/").pop();
+    let currentPage = window.location.pathname.split("/").filter(Boolean).pop();
     const navLinks = document.querySelectorAll("nav ul li a");
 
     navLinks.forEach((link) => {
-        let linkPath = link.getAttribute("href");
-        let pageLink = linkPath.split("/").pop();
-
+        let pageLink = link
+            .getAttribute("href")
+            .split("/")
+            .filter(Boolean)
+            .pop();
         if (pageLink === currentPage) {
             link.classList.add("active");
         } else {
