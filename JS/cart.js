@@ -1,70 +1,138 @@
-//------------------------------------------------{temporary}-----------------------------------------------//
-//increse quantity {counter function}
-/*let ShoppingBagCounter = document.querySelectorAll(".ShoppingBagCounter");
-let AddToCartButton = document.querySelectorAll(".AddToCart");
+//save data to LocalStorage
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-let initialQuantityOfProduct = 0;
-AddToCartButton.forEach((btn) => {
-    btn.addEventListener("click", () => {
-        initialQuantityOfProduct++;
-        ShoppingBagCounter.forEach((num) => {
-            num.innerHTML = initialQuantityOfProduct;
+// Observe when the DOM is modified
+const observeDOMChanges = () => {
+    const observer = new MutationObserver(() => {
+        const ShoppingBagCounter = document.querySelectorAll(".count-item");
+        const cartDiv = document.getElementById("addedProducts");
+        let subTotal = document.getElementById("subTotal");
+
+        if (ShoppingBagCounter.length > 0 && cartDiv) {
+            console.log(
+                "Elements found:",
+                ShoppingBagCounter,
+                cartDiv,
+                subTotal,
+            );
+            observer.disconnect();
+            initCart();
+        }
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+};
+
+// Initialize cart functionality
+const initCart = () => {
+    const ShoppingBagCounter = document.querySelectorAll(".count-item");
+
+    // Cart Counter
+    const updateCartCounter = () => {
+        let totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+        ShoppingBagCounter.forEach((el) => {
+            el.textContent = totalItems;
         });
-    });
-});
-// Handle the removal of products from the table
-document.querySelectorAll(".btn-remove").forEach((btn) => {
-    btn.addEventListener("click", (event) => {
-        const row = event.target.closest("tr");
-        row.remove();
-    });
-});
-//------------------------------------------------{temporary}-----------------------------------------------//
-*/
-// cart data stractue
-let cart = [];
-// Add to cart
-const addToCart = (productName, price) => {
-    const existItem = cart.find((i) => i.name === productName);
-    if (existItem) {
-        existItem.quantity++;
-    } else [cart.push({ name: productName, quantity: 1, price })];
-};
-// Remove from cart
-const removeFromCart = (productName) => {
-    updateCart = cart.filter((item) => item.name !== productName);
-};
-// Increment quantity
-const incrementQuantity = (productName) => {
-    const isMatch = cart.find((i) => i.name === productName);
-    if (isMatch) {
-        isMatch.quantity++;
-    }
-};
-// decrement quantity
-const decrementQuantity = (productName) => {
-    const isMatch = cart.find((i) => i.name === productName);
-    if (isMatch && isMatch.quantity > 1) {
-        isMatch.quantity--;
-    } else {
-        removeFromCart(productName);
-    }
-};
-// calculate price
-let discountRate = 0;
-let shippingFee = 0;
-const calculatePrice = () => {
-    let subtotal = cart.reduce(
-        (sum, item) => sum + item.price * item.quantity,
-        0,
-    );
-    let discount = subtotal * discountRate;
-    let total = subtotal - discount + shippingFee;
+    };
 
-    document.getElementById("subtotal").textContent = subtotal.toFixed(2);
-    document.getElementById("total").textContent = total.toFixed(2);
-    document.getElementById("discount").textContent = discountRate.toFixed(2);
+    // Update Local Storage
+    const saveCartToLocalStorage = () => {
+        localStorage.setItem("cart", JSON.stringify(cart));
+    };
+
+    //  Add to Cart
+    const addToCart = (productName, price) => {
+        console.log("clicked");
+        const existItem = cart.find((i) => i.productName === productName);
+        if (existItem) {
+            existItem.quantity++;
+        } else {
+            cart.push({ productName, price, quantity: 1 });
+        }
+        updateCart();
+    };
+
+    // Update Quantity
+    const updateQuantity = (index, change) => {
+        if (index >= 0 && index < cart.length) {
+            cart[index].quantity += change;
+            if (cart[index].quantity <= 0) {
+                removeFromCart(index);
+            } else {
+                updateCart();
+            }
+        }
+    };
+
+    // Remove from Cart by Index
+    const removeFromCart = (index) => {
+        cart.splice(index, 1);
+        updateCart();
+    };
+
+    // Calculate Price
+    let discountRate = 0;
+    let shippingFee = 0;
+    let subTotalPrice = document.getElementById("subTotal");
+    const calculatePrice = () => {
+        let subtotal = cart.reduce(
+            (sum, item) => sum + item.price * item.quantity,
+            0,
+        );
+        // subTotalPrice = subtotal;
+
+        let discount = subtotal * discountRate;
+        let total = subtotal - discount + shippingFee;
+
+        const subtotalEl = document.getElementById("subTotal");
+        const totalEl = document.getElementById("total");
+
+        if (subtotalEl) subtotalEl.textContent = subtotal.toFixed(2);
+        if (totalEl) totalEl.textContent = total.toFixed(2);
+    };
+
+    // Update Cart UI
+    const cartDiv = document.getElementById("addedProducts");
+    const updateCart = () => {
+        updateCartCounter();
+        calculatePrice();
+        saveCartToLocalStorage();
+        console.log(cart);
+        cartDiv.innerHTML = "";
+
+        cart.forEach((item, index) => {
+            const cartItem = document.createElement("div");
+            cartItem.classList.add("cart-item");
+            cartItem.innerHTML = `
+                <span>${item.productName} ($${item.price})</span>
+                <div>
+                    <button class="btn btn-sm btn-danger btn-decrease">-</button>
+                    <span class="mx-2">${item.quantity}</span>
+                    <button class="btn btn-sm btn-success btn-increase">+</button>
+                    <button class="btn btn-sm btn-warning btn-remove">Remove</button>
+                </div>
+            `;
+
+            // Add event listeners dynamically
+            cartItem
+                .querySelector(".btn-decrease")
+                .addEventListener("click", () => updateQuantity(index, -1));
+            cartItem
+                .querySelector(".btn-increase")
+                .addEventListener("click", () => updateQuantity(index, 1));
+            cartItem
+                .querySelector(".btn-remove")
+                .addEventListener("click", () => removeFromCart(index));
+
+            cartDiv.appendChild(cartItem);
+        });
+    };
+
+    updateCart();
+
+    // Make functions globally accessible ***** (Rip)
+    window.addToCart = addToCart;
 };
 
-// Apply copun code
-// update cart display
+// Start observing changes
+observeDOMChanges();

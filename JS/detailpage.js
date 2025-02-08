@@ -9,6 +9,7 @@ paginationImg.forEach((img) => {
 //increment or decriment quantity of product
 let incrementQuantity = document.getElementById("incrementQuantity");
 let decrementQuantity = document.getElementById("decrementQuantity");
+s;
 let quantityFigure = document.getElementById("quantityFigure");
 let initialQuantity = 0;
 incrementQuantity.addEventListener("click", () => {
