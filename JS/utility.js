@@ -3,20 +3,28 @@ let basePath = window.location.pathname.includes("/pages/") ? "../" : "./";
 
 const loadComponents = (id, fileName, callback) => {
     fetch(basePath + fileName)
-        .then((response) => response.text())
+        .then((response) => {
+            if (!response.ok) throw new Error(`Failed to load: ${fileName}`);
+            return response.text();
+        })
         .then((data) => {
             document.getElementById(id).innerHTML = data;
             if (callback) callback();
         })
-        .catch((err) => console.error("Loading failed: " + fileName, err));
+        .catch((err) => {
+            console.error("Loading failed: " + fileName, err);
+            document.getElementById(
+                id,
+            ).innerHTML = `<p>Error loading ${fileName}</p>`;
+        });
 };
 
 // Load components on DOMContentLoaded
 document.addEventListener("DOMContentLoaded", () => {
-    loadComponents("header", "/components/navbar.html", highlightActiveLink);
-    loadComponents("footer", "/components/footer.html");
-    loadComponents("desktopCartOffcanvas", basePath + "/pages/cart.html");
-    loadComponents("mobileCartOffcanvas", basePath + "/pages/cart.html");
+    loadComponents("header", "components/navbar.html", highlightActiveLink);
+    loadComponents("footer", "components/footer.html");
+    loadComponents("desktopCartOffcanvas", "pages/cart.html");
+    loadComponents("mobileCartOffcanvas", "pages/cart.html");
 });
 
 // Highlight the active navigation link based on the current page
