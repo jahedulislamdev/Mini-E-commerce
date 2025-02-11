@@ -21,11 +21,28 @@ const loadComponents = (id, fileName, callback) => {
 
 // Load components on DOMContentLoaded
 document.addEventListener("DOMContentLoaded", async () => {
-    loadComponents("header", "components/navbar.html", highlightActiveLink);
-    loadComponents("footer", "components/footer.html");
-    loadComponents("mobileCartOffcanvas", "pages/cart.html");
-    loadComponents("desktopCartOffcanvas", "pages/cart.html");
+    // Load Navbar First
+    await loadComponents("header", "components/navbar.html", () => {
+        highlightActiveLink(); // Ensure navbar links are highlighted
+
+        // Wait for navbar to be fully loaded before loading carts
+        setTimeout(() => {
+            if (window.innerWidth < 992) {
+                console.log("Loading mobile cart...");
+                loadComponents("mobileCartOffcanvas", "pages/cart.html");
+            } else {
+                console.log("Loading desktop cart...");
+                loadComponents("desktopCartOffcanvas", "pages/cart.html");
+            }
+        }, 100); // Small delay to ensure DOM updates
+    });
+
+    // Load Footer
+    await loadComponents("footer", "components/footer.html");
 });
+
+
+
 
 // Highlight the active navigation link based on the current page
 const highlightActiveLink = () => {
