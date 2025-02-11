@@ -20,11 +20,11 @@ const loadComponents = (id, fileName, callback) => {
 };
 
 // Load components on DOMContentLoaded
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
     loadComponents("header", "components/navbar.html", highlightActiveLink);
     loadComponents("footer", "components/footer.html");
-    loadComponents("desktopCartOffcanvas", "pages/cart.html");
     loadComponents("mobileCartOffcanvas", "pages/cart.html");
+    loadComponents("desktopCartOffcanvas", "pages/cart.html");
 });
 
 // Highlight the active navigation link based on the current page
