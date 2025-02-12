@@ -14,7 +14,7 @@
 <body>
    <div id="header"></div>
    <div class="container">
-      <div class="row mt-3">
+      <div class="row flex-column-reverse flex-md-row mt-3">
          <div class="col-12 col-md-6 bg-light-subtle my-2 p-3">
             <div class="border p-3">
                <div class="d-flex justify-content-between align-items-center">
@@ -63,7 +63,7 @@
                <!-- save info checkbox -->
                <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                  <label class="form-check-label text-muted" for="flexCheckChecked">
+                  <label style="font-size: 13px;" class="form-check-label text-muted" for="flexCheckChecked">
                      Save this information for next time
                   </label>
                </div>
@@ -89,7 +89,7 @@
             <!-- Payment Section -->
             <div class="border mt-3 p-3">
                <h6>Payment Method</h6>
-               <p style="font-size: 15px;" class="text-muted fw-light">All transactions are secure and encrypted.</p>
+               <p style="font-size: 14px;" class="text-muted fw-light">All transactions are secure and encrypted.</p>
                <div class="payment-box">Cash on Delivery (COD)</div>
             </div>
 
@@ -97,8 +97,8 @@
             <div class="border p-3 mt-3">
                <h6>Billing address</h6>
                <div class="custom-radio">
-                  <input type="radio" id="sameAddress" name="billing" class="d-none" checked data-bs-toggle="collapse"
-                     data-bs-target="#billingAddressField" aria-expanded="false" aria-controls="billingAddressField">
+                  <input type="radio" id="sameAddress" name="billing" class="d-none" checked aria-expanded="false"
+                     aria-controls="billingAddressField">
                   <label for="sameAddress">
                      <span>Same as shipping address</span>
                   </label>
@@ -118,26 +118,78 @@
             </div>
          </div>
          <!-- order summary -->
-         <div class="col-12 col-md-6 bg-light-subtle my-2 p-3">
-            <div class="d-flex justify-content-between">
-               <div class="d-flex">
-                  <div class="position-relative">
-                     <img class="img-fluid checkout-product-img me-3"
-                        src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
-                        alt="">
-                     <span class="position-absolute end-50  translate-middle badge rounded-pill bg-danger">
-                        99+
-                        <span class="visually-hidden"></span>
-                     </span>
+         <div class="col-12 col-md-6 bg-light-subtle my-2  px-3 px-md-3 py-3">
+            <div class="selected-product p-3 border">
+               <!-- product summary start -->
+               <div class="d-flex justify-content-between mb-3">
+                  <div class="d-flex">
+                     <div class="position-relative">
+                        <img class="img-fluid checkout-product-img me-3"
+                           src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
+                           alt="">
+                        <span class="position-absolute start-0  translate-middle badge rounded-pill bg-danger">
+                           1
+                           <span class="visually-hidden"></span>
+                        </span>
+                     </div>
+                     <div>
+                        <h6 class="p-0 m-0">Order Name</h6>
+                        <p class="p-0 m-0"><small>Order size</small></p>
+                     </div>
                   </div>
-                  <div>
-                     <h6 class="p-0 m-0">Order Name</h6>
-                     <p class="p-0 m-0"><small>Order size</small></p>
-                  </div>
+                  <p><span>000</span>৳</p>
                </div>
-               <p><span>000</span>৳</p>
+               <!-- product summary end -->
+               <!-- product summary start -->
+               <div class="d-flex justify-content-between">
+                  <div class="d-flex">
+                     <div class="position-relative">
+                        <img class="img-fluid checkout-product-img me-3"
+                           src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
+                           alt="">
+                        <span class="position-absolute start-0  translate-middle badge rounded-pill bg-danger">
+                           1
+                           <span class="visually-hidden"></span>
+                        </span>
+                     </div>
+                     <div>
+                        <h6 class="p-0 m-0">Order Name</h6>
+                        <p class="p-0 m-0"><small>Order size</small></p>
+                     </div>
+                  </div>
+                  <p><span>000</span>৳</p>
+               </div>
+               <!-- product summary end -->
+            </div>
+            <div class="d-flex justify-content-between align-items-center p-3 border mt-2">
+               <p class="fw-semibold p-0 m-0">Subtotal</p>
+               <p class="fw-semibold p-0 m-0">000$</p>
+            </div>
+            <div class="p-3 border mt-3">
+               <!-- Coupon code start-->
+               <div class="input-group mb-3">
+                  <input type="text" class="form-control py-2 border-dark" aria-label="Sizing example input"
+                     aria-describedby="inputGroup-sizing-default" placeholder="Coupon code">
+                  <button class="input-group-text btn btn-outline-secondary" id="inputGroup-sizing-default">Apply
+                     <span class="d-none d-md-inline-block">Coupon</span></button>
+               </div>
+               <!-- Coupon code end-->
+               <div class="d-flex justify-content-between align-items-center">
+                  <p>Shipping Charge </p>
+                  <p>000$</p>
+               </div>
+               <div class="d-flex justify-content-between align-items-center">
+                  <p class="fw-semibold">Total</p>
+                  <p class="fw-semibold">000$</p>
+               </div>
+               <div>
+                  <button class="d-none d-md-block btn btn-secondary fw-semibold w-100 my-2">Confirm Order</button>
+               </div>
             </div>
          </div>
+      </div>
+      <div class="row d-block d-md-none px-3">
+         <button class="btn btn-secondary fw-semibold col-12  col-md-6 my-2">Confirm Order</button>
       </div>
    </div>
    <div id="footer"></div>

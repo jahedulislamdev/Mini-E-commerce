@@ -4,14 +4,17 @@
     overflow: hidden;
     padding: 50px 0;
 }
+.about-text {
+    padding: 0 70px;
+}
 .services-title {
     font-size: 4rem;
     font-weight: bold;
     color: #333;
 }
 .services-desc {
-    font-size: 1.8rem;
-    text-align: center;
+    font-size: 1.7rem;
+    text-align: end;
     color: #555;
     max-width: 800px;
     margin: 0 auto;
@@ -48,17 +51,27 @@
 @media screen and (max-width: 590px) {
     .services-title {
         font-size: 2rem !important;
+        text-align: center;
+    }
+    .about-text {
+        padding: 0 20px;
     }
     .services-desc {
-        font-size: 0.6rem !important;
+        font-size: 1rem !important;
+        text-align: center;
     }
 }
 @media screen and (max-width: 768px) {
+    .about-text {
+        padding: 0 10px;
+    }
     .services-title {
-        font-size: 3rem;
+        font-size: 2.5rem;
+        text-align: center;
     }
     .services-desc {
-        font-size: 1rem;
+        font-size: 1.3rem;
+        text-align: center;
     }
     .product-card {
         width: 130px;
