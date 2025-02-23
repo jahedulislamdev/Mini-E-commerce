@@ -120,52 +120,73 @@
          <!-- order summary -->
          <div class="col-12 col-md-6 bg-light-subtle my-2  px-3 px-md-3 py-3">
             <div class="selected-product p-3 border">
-               <!-- product summary start -->
-               <div class="d-flex justify-content-between mb-3">
-                  <div class="d-flex">
-                     <div class="position-relative">
-                        <img class="img-fluid checkout-product-img me-3"
-                           src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
-                           alt="">
-                        <span class="position-absolute start-0  translate-middle badge rounded-pill bg-danger">
-                           1
-                           <span class="visually-hidden"></span>
-                        </span>
+               <div class=" mb-3 d-flex justify-content-end align-items-center">
+                  <a href="./product.html" class="text-primary text-decoration-none">Add More Products</a>
+               </div>
+               <div class="accordion" id="productSummary">
+                  <div class="accordion-item">
+                     <div class="accordion-header" id="headingOne">
+                        <button type="button" class="accordion-button bg-light" data-bs-toggle="collapse"
+                           data-bs-target="#showSummary" aria-expanded="true" aria-controls="showSummary">Your
+                           Products
+                        </button>
                      </div>
-                     <div>
-                        <h6 class="p-0 m-0">Order Name</h6>
-                        <p class="p-0 m-0"><small>Order size</small></p>
+                     <div id="showSummary" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="productSummary">
+                        <div class="accordion-body">
+                           <!-- product summary start -->
+                           <div class="d-flex justify-content-between mb-3">
+                              <div class="d-flex">
+                                 <div class="position-relative">
+                                    <img class="img-fluid checkout-product-img me-3"
+                                       src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
+                                       alt="">
+                                    <span
+                                       class="position-absolute start-0  translate-middle badge rounded-pill bg-danger">
+                                       1
+                                       <span class="visually-hidden"></span>
+                                    </span>
+                                 </div>
+                                 <div>
+                                    <h6 class="p-0 m-0">Order Name</h6>
+                                    <p class="p-0 m-0"><small>Order size</small></p>
+                                 </div>
+                              </div>
+                              <p><span>000</span>৳</p>
+                           </div>
+                           <!-- product summary end -->
+                           <!-- product summary start -->
+                           <div class="d-flex justify-content-between mb-3">
+                              <div class="d-flex">
+                                 <div class="position-relative">
+                                    <img class="img-fluid checkout-product-img me-3"
+                                       src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
+                                       alt="">
+                                    <span
+                                       class="position-absolute start-0  translate-middle badge rounded-pill bg-danger">
+                                       1
+                                       <span class="visually-hidden"></span>
+                                    </span>
+                                 </div>
+                                 <div>
+                                    <h6 class="p-0 m-0">Order Name</h6>
+                                    <p class="p-0 m-0"><small>Order size</small></p>
+                                 </div>
+                              </div>
+                              <p><span>000</span>৳</p>
+                           </div>
+                           <!-- product summary end -->
+                        </div>
                      </div>
                   </div>
-                  <p><span>000</span>৳</p>
                </div>
-               <!-- product summary end -->
-               <!-- product summary start -->
-               <div class="d-flex justify-content-between">
-                  <div class="d-flex">
-                     <div class="position-relative">
-                        <img class="img-fluid checkout-product-img me-3"
-                           src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
-                           alt="">
-                        <span class="position-absolute start-0  translate-middle badge rounded-pill bg-danger">
-                           1
-                           <span class="visually-hidden"></span>
-                        </span>
-                     </div>
-                     <div>
-                        <h6 class="p-0 m-0">Order Name</h6>
-                        <p class="p-0 m-0"><small>Order size</small></p>
-                     </div>
-                  </div>
-                  <p><span>000</span>৳</p>
-               </div>
-               <!-- product summary end -->
             </div>
             <div class="d-flex justify-content-between align-items-center p-3 border mt-2">
                <p class="fw-semibold p-0 m-0">Subtotal</p>
                <p class="fw-semibold p-0 m-0">000$</p>
             </div>
             <div class="p-3 border mt-3">
+               <h6>Total Payable Amount</h6>
                <!-- Coupon code start-->
                <div class="input-group mb-3">
                   <input type="text" class="form-control py-2 border-dark" aria-label="Sizing example input"
