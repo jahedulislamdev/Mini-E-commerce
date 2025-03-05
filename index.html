@@ -9,6 +9,7 @@
    <link rel="stylesheet" href="./css/index.css">
    <link rel="stylesheet" href="./css/bootstrap.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -77,6 +78,7 @@
       aria-labelledby="mobileCartOffcanvasLabel">
    </div>
    <!-- navbar end-->
+   <!-- services start -->
    <section id="services">
       <div class="container">
          <div>
@@ -134,7 +136,44 @@
             </div>
          </div>
       </div>
+      <h4 class="text-center mt-5">Featured Products</h4>
+      <div class=" container mt-3">
+         <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+               <div class="swiper-slide bg-primary-subtle rounded-2">
+                  <img class="rounded-2"
+                     src="https://images.unsplash.com/photo-1614850715649-1d0106293bd1?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFja2dyb3VuZCUyMGNvdmVyfGVufDB8fDB8fHww"
+                     alt="">
+               </div>
+               <div class="swiper-slide bg-danger-subtle rounded-2">
+                  <div class="p-5">
+                     <h1>slide-2</h1>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quod aliquid a, numquam
+                        nemo Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores inventore ipsam
+                        recusandae facilis iste mollitia voluptas error! Autem, voluptates quis?
+                        neque nobis corrupti enim magni exercitationem.
+                     </p>
+                  </div>
+               </div>
+               <div class="swiper-slide bg-success-subtle rounded-2">
+                  <div class="p-5">
+                     <h1>slide-3</h1>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quod aliquid a, numquam
+                        nemo Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores inventore ipsam
+                        recusandae facilis iste mollitia voluptas error! Autem, voluptates quis?
+                        neque nobis corrupti enim magni exercitationem.
+                     </p>
+                  </div>
+               </div>
+
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+         </div>
+      </div>
    </section>
+   <!-- services end -->
    <!-- Footer start-->
    <footer>
       <p class="text-center bg-dark fw-light p-3 my-0">&copy; 2025 <a href="./index.html"
@@ -142,9 +181,31 @@
          rights reserved.</p>
    </footer>
    <!-- Footer end-->
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   <script>
+      // swiper carousel start here
+      var swiper = new Swiper(".mySwiper", {
+         slidesPerView: 1,
+         spaceBetween: 30,
+         speed: 1500,
+         loop: true,
+         pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+         },
+         autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+         },
+         navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+         },
+      });
+   </script>
    <script src="./JS/bootstrap.js"></script>
    <script type="module" src="./JS/cart.js"></script>
-   <!-- <script type="module" src="./JS/utility.js"></script> -->
+
 </body>
 
 </html>
