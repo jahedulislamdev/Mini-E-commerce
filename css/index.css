@@ -41,11 +41,16 @@
     font-weight: bolder;
 }
 .swiper-slide {
-    height: 300px !important;
+    height: 350px !important;
     width: 100% !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
+}
+.swiper-slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 /* Product Card */
 .product-card {
@@ -79,6 +84,9 @@
         font-size: 1rem !important;
         text-align: center;
     }
+    .swiper-slide {
+        height: 200px !important;
+    }
 }
 @media screen and (max-width: 768px) {
     .about-text {
@@ -94,5 +102,8 @@
     }
     .product-card {
         width: 130px;
+    }
+    .swiper-slide {
+        height: 230px !important;
     }
 }

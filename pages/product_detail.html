@@ -46,7 +46,7 @@
             <p>Brand : <small class="text-primary">No Brand. More Hand Tools from No
                   Brand</small></p>
             <!-- product color -->
-            <div class="select-color d-md-flex align-items-center">
+            <div class="select-color d-flex align-items-center">
                <h6>Select Color</h6>
                <div class="btn-group" role="group">
                   <div class="form-check">
@@ -68,8 +68,8 @@
                </div>
             </div>
             <!-- product size -->
-            <div class="product-size my-3 d-md-flex align-items-center">
-               <h6 class="me-4">Select Size</h6>
+            <div class="product-size my-3 d-flex align-items-center">
+               <h6 class="me-4">Select Size </h6>
                <div class="btn-group" role="group" aria-label="Size selection">
                   <input type="radio" class="btn-check" name="size" id="sizeS" autocomplete="off" checked>
                   <label class="btn btn-outline-secondary" for="sizeS">S</label>
@@ -91,15 +91,19 @@
                </div>
             </div>
             <!-- product quantity -->
-            <div class="quantity my-2 p-1 rounded-2 border d-flex justify-content-center align-items-center">
-               <button id="decrementQuantity" class="btn border bg-primary-subtle fw-semibold py-1 m-0 me-2">-</button>
-               <button id="quantityFigure" class="btn disabled border-0" role="doc-notice">0</button>
-               <button id="incrementQuantity" class="btn border bg-primary-subtle fw-semibold py-1 m-0 ms-2">+</button>
+            <div class="d-flex align-items-center py-2 mb-2 bg-light">
+               <h6 class="me-4">Quantity </h6>
+               <div class="btn-group" role="group" aria-label="Basic example">
+                  <button type="button" class="border border-black px-3 py-2 rounded-start" id="decrement">-</button>
+                  <button type="button" class="border border-black border-end-0 px-3 py-2 border-start-0"
+                     id="quantity"></button>
+                  <button type="button" class="border border-black px-3 py-2 rounded-end" id="increment">+</button>
+               </div>
             </div>
             <!-- buy or add to cart btn -->
             <div>
                <button class="btn btn-outline-primary rounded-0 px-4">Buy Now</button>
-               <button class="btn bg-warning rounded-0 px-4 AddToCart">Add to Cart</button>
+               <button class="btn bg-warning rounded-0 px-4 " id="addToCartMain">Add to Cart</button>
             </div>
             <small class="fw-light text-muted mt-2 lh-sm d-block">A short description. Lorem ipsum dolor sit amet,
                consectetur

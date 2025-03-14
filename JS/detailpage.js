@@ -1,24 +1,37 @@
-//display image changing function
 let displayImg = document.getElementById("displayImg");
 let paginationImg = document.querySelectorAll(".pagination-img");
+
 paginationImg.forEach((img) => {
     img.onclick = () => {
-        displayImg.src = img.src;
+        displayImg.classList.add("fade");
+        setTimeout(() => {
+            displayImg.src = img.src;
+            displayImg.classList.remove("fade");
+        }, 300);
     };
 });
+
 //increment or decriment quantity of product
-let incrementQuantity = document.getElementById("incrementQuantity");
-let decrementQuantity = document.getElementById("decrementQuantity");
-s;
-let quantityFigure = document.getElementById("quantityFigure");
-let initialQuantity = 0;
-incrementQuantity.addEventListener("click", () => {
-    initialQuantity++;
-    quantityFigure.innerText = initialQuantity;
+
+const increment = document.getElementById("increment");
+const decrement = document.getElementById("decrement");
+const quantity = document.getElementById("quantity");
+const addToCart = document.getElementById("addToCartMain");
+
+// console.log(increment, decrement, quantity, addToCart);
+let count = 1;
+quantity.innerText = count;
+increment.addEventListener("click", () => {
+    count++;
+    quantity.innerText = count;
 });
-decrementQuantity.addEventListener("click", () => {
-    if (initialQuantity > 0) {
-        initialQuantity--;
-        quantityFigure.innerText = initialQuantity;
+decrement.addEventListener("click", () => {
+    if (count > 1) {
+        count--;
+        quantity.innerText = count;
     }
+});
+addToCart.addEventListener("click", () => {
+    alert("Hey Developer! you have to implement this feature.");
+    // addToCart(productName, price, productImg);
 });

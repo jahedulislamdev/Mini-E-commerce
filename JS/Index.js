@@ -129,6 +129,9 @@ const displayItems = () => {
                 "mb-4",
             );
             productCard.innerHTML = `
+                <a href="../pages/product_detail.html?id=${
+                    product.id
+                }" class="text-decoration-none text-dark">
                 <div class="card mb-2">
                     <div class="img-container">
                         <img src="${
@@ -150,6 +153,7 @@ const displayItems = () => {
                         </button>
                     </div>
                 </div>
+                </a>
             `;
 
             // Add event listener to the "Add to Cart" button
