@@ -1,37 +1,53 @@
-let displayImg = document.getElementById("displayImg");
-let paginationImg = document.querySelectorAll(".pagination-img");
+document.addEventListener("DOMContentLoaded", () => {
+    // Image gallery functionality for product detail page
+    let displayImg = document.getElementById("displayImg");
+    let paginationImg = document.querySelectorAll(".pagination-img");
 
-paginationImg.forEach((img) => {
-    img.onclick = () => {
-        displayImg.classList.add("fade");
-        setTimeout(() => {
-            displayImg.src = img.src;
-            displayImg.classList.remove("fade");
-        }, 300);
-    };
-});
+    paginationImg.forEach((img) => {
+        img.onclick = () => {
+            displayImg.classList.add("fade");
+            setTimeout(() => {
+                displayImg.src = img.src;
+                displayImg.classList.remove("fade");
+            }, 300);
+        };
+    });
 
-//increment or decriment quantity of product
+    // Quantity increment and decrement functionality
+    const addToCartBtn = document.getElementById("addToCartMain");
+    const increment = document.getElementById("increment");
+    const decrement = document.getElementById("decrement");
+    const quantity = document.getElementById("quantity");
 
-const increment = document.getElementById("increment");
-const decrement = document.getElementById("decrement");
-const quantity = document.getElementById("quantity");
-const addToCart = document.getElementById("addToCartMain");
+    let totalProduct = 1;
+    quantity.innerText = totalProduct;
 
-// console.log(increment, decrement, quantity, addToCart);
-let count = 1;
-quantity.innerText = count;
-increment.addEventListener("click", () => {
-    count++;
-    quantity.innerText = count;
-});
-decrement.addEventListener("click", () => {
-    if (count > 1) {
-        count--;
-        quantity.innerText = count;
-    }
-});
-addToCart.addEventListener("click", () => {
-    alert("Hey Developer! you have to implement this feature.");
-    // addToCart(productName, price, productImg);
+    increment.addEventListener("click", () => {
+        totalProduct++;
+        quantity.innerText = totalProduct;
+    });
+
+    decrement.addEventListener("click", () => {
+        if (totalProduct > 1) {
+            totalProduct--;
+            quantity.innerText = totalProduct;
+        }
+    });
+
+    addToCartBtn.addEventListener("click", () => {
+        const productName = document.querySelector(".product-title").innerText;
+        const price = parseFloat(
+            document.querySelector(".product-price").innerText.replace("$", ""),
+        );
+
+        // Get the current quantity
+        const currentQuantity = parseInt(quantity.innerText);
+
+        if (window.addToCart) {
+            window.addToCart(productName, price, currentQuantity);
+            alert(` Added ${currentQuantity} items to cart!`);
+        } else {
+            console.error("addToCart function not found.");
+        }
+    });
 });

@@ -38,12 +38,12 @@ const initCart = () => {
     };
 
     // Function to add an item to the cart
-    const addToCart = (productName, price, productImg) => {
+    const addToCart = (productName, price, quantity = 1) => {
         const existItem = cart.find((i) => i.productName === productName);
         if (existItem) {
-            existItem.quantity++;
+            existItem.quantity += quantity;
         } else {
-            cart.push({ productName, price, quantity: 1 });
+            cart.push({ productName, price, quantity });
         }
         updateCart();
     };
@@ -86,7 +86,7 @@ const initCart = () => {
                     "cart-item",
                     "d-flex",
                     "align-items-center",
-                    "bg-secondary-subtle",
+                    "bg-info-subtle",
                     "justify-content-between",
                     "mb-2",
                     "p-2",
@@ -97,11 +97,11 @@ const initCart = () => {
                 cartItem.innerHTML = `
                     <span class="cart-item-name">${item.productName} ($${item.price})</span>
                     <div>
-                        <div class="btn-group ms-1" role="group">
+                        <div class="btn-group " role="group">
                             <button class="btn btn-sm btn-outline-secondary btn-decrease rounded-start">-</button>
                             <button class="btn border-secondary rounded-0">${item.quantity}</button>
                             <button class="btn btn-sm btn-outline-secondary btn-increase rounded-end">+</button>
-                            <button class="ms-2 btn btn-sm text-danger btn-remove rounded"><i class="fa-solid fa-x"></i></button>
+                            <button class="ms-2 btn btn-sm text-danger btn-remove rounded"><i class="fa-solid fa-trash"></i></button>
                         </div>
                     </div>
                 `;
