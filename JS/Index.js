@@ -10,8 +10,7 @@ const displayItems = () => {
             description:
                 "Compact and ergonomic earbuds with superior sound quality and noise cancellation.",
             brandName: "SoundTech",
-            productImg:
-                "https://images.unsplash.com/photo-1603694681044-e71c5993d6cd?w=600&auto=format&fit=crop&q=60",
+            productImg: "https://i.postimg.cc/Hs4xb1JW/demo-img.jpg",
         },
         {
             id: 2,
@@ -21,8 +20,7 @@ const displayItems = () => {
             description:
                 "Lightweight running shoes with breathable material and comfortable cushioning.",
             brandName: "StridePro",
-            productImg:
-                "https://images.unsplash.com/photo-1620856902651-ce18d6d31d42?w=600&auto=format&fit=crop&q=60",
+            productImg: "https://i.postimg.cc/Hs4xb1JW/demo-img.jpg",
         },
         {
             id: 3,
@@ -32,8 +30,7 @@ const displayItems = () => {
             description:
                 "Feature-packed smartwatch with fitness tracking, notifications, and long battery life.",
             brandName: "TechGear",
-            productImg:
-                "https://plus.unsplash.com/premium_photo-1683120889995-b6a309252981?w=600&auto=format&fit=crop&q=60",
+            productImg: "https://i.postimg.cc/Hs4xb1JW/demo-img.jpg",
         },
         {
             id: 4,
@@ -43,8 +40,7 @@ const displayItems = () => {
             description:
                 "High-performance laptop with powerful graphics card, fast processor, and RGB keyboard.",
             brandName: "GameCore",
-            productImg:
-                "https://plus.unsplash.com/premium_photo-1661304671477-37c77d0c6930?w=600&auto=format&fit=crop&q=60",
+            productImg: "https://i.postimg.cc/Hs4xb1JW/demo-img.jpg",
         },
         {
             id: 5,
@@ -54,8 +50,7 @@ const displayItems = () => {
             description:
                 "Efficient blender with multiple speed settings, ideal for smoothies and soups.",
             brandName: "KitchenAid",
-            productImg:
-                "https://plus.unsplash.com/premium_photo-1683121716061-3faddf4dc504?w=600&auto=format&fit=crop&q=60",
+            productImg: "https://i.postimg.cc/Hs4xb1JW/demo-img.jpg",
         },
         {
             id: 6,
@@ -65,8 +60,7 @@ const displayItems = () => {
             description:
                 "Ultra HD smart TV with built-in streaming apps and voice control.",
             brandName: "VisionView",
-            productImg:
-                "https://images.unsplash.com/photo-1604594849809-d4e05679d4b0?w=600&auto=format&fit=crop&q=60",
+            productImg: "https://i.postimg.cc/Hs4xb1JW/demo-img.jpg",
         },
         {
             id: 7,
@@ -76,8 +70,7 @@ const displayItems = () => {
             description:
                 "Non-slip yoga mat with durable material and easy-to-clean surface.",
             brandName: "FlexFit",
-            productImg:
-                "https://images.unsplash.com/photo-1599058917760-d1819ac44d1e?w=600&auto=format&fit=crop&q=60",
+            productImg: "https://i.postimg.cc/Hs4xb1JW/demo-img.jpg",
         },
         {
             id: 8,
@@ -87,8 +80,7 @@ const displayItems = () => {
             description:
                 "Automatic coffee maker with programmable settings and thermal carafe.",
             brandName: "BrewMaster",
-            productImg:
-                "https://images.unsplash.com/photo-1513896727217-8b6f5b060202?w=600&auto=format&fit=crop&q=60",
+            productImg: "https://i.postimg.cc/Hs4xb1JW/demo-img.jpg",
         },
         {
             id: 9,
@@ -98,8 +90,7 @@ const displayItems = () => {
             description:
                 "Track your steps, heart rate, and calories with this lightweight tracker.",
             brandName: "TrackFit",
-            productImg:
-                "https://images.unsplash.com/photo-1565078513764-16e8c8c8e034?w=600&auto=format&fit=crop&q=60",
+            productImg: "https://i.postimg.cc/Hs4xb1JW/demo-img.jpg",
         },
         {
             id: 10,
@@ -109,8 +100,7 @@ const displayItems = () => {
             description:
                 "Ergonomic office chair with lumbar support and adjustable height.",
             brandName: "ComfortWork",
-            productImg:
-                "https://images.unsplash.com/photo-1519566335946-7d7a7a1e5f3b?w=600&auto=format&fit=crop&q=60",
+            productImg: "https://i.postimg.cc/Hs4xb1JW/demo-img.jpg",
         },
     ];
 
